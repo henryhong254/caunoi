@@ -277,6 +277,7 @@ h1, h2, h3, h4 { font-family: "Playfair Display", serif; font-weight: 600; line-
 .parallax-solution {
   position: relative;
   background-image: url('manydoor.jpg');
+  background-color: #04584c;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
