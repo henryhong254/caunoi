@@ -61,7 +61,7 @@
   <section class="section vt-section" id="timeline">
     <div class="container text-center" style="margin-bottom: 60px;">
       <div class="section-label mx-auto">Từ Người Xem Đến Khách Trả Phí</div>
-      <h2 class="section-title">Người Xem Không Mua Ngay.<br>Họ Cần Dẫn Dắt Qua 3 Trạm Chuyển Đổi.</h2>
+      <h2 class="section-title" style="text-wrap: balance;">Người Xem Không Mua Ngay.<br>Họ Cần Dẫn Dắt Qua 3 Trạm Chuyển Đổi.</h2>
     </div>
 
     <div class="vt-wrap">
@@ -85,7 +85,7 @@
 
       <!-- ROW 0: START -->
       <div class="vt-row">
-        <div class="vt-col vt-left">
+        <div class="vt-col vt-left col-img">
           <div class="vt-img-card">
             <img src="mecung.jpg" alt="Trạm 0">
           </div>
@@ -106,7 +106,7 @@
           <div class="vt-equip-badge">Trang Bị: Personal Hub</div>
         </div>
         <div class="vt-center">Trạm<br>I</div>
-        <div class="vt-col vt-right">
+        <div class="vt-col vt-right col-img">
           <div class="vt-img-card">
             <img src="connect_clean.jpg" alt="Trạm 1">
           </div>
@@ -115,7 +115,7 @@
 
       <!-- ROW 2: CHANG 2 -->
       <div class="vt-row">
-        <div class="vt-col vt-left">
+        <div class="vt-col vt-left col-img">
           <div class="vt-img-card">
             <img src="gi1.jpg" alt="Trạm 2">
           </div>
@@ -136,7 +136,7 @@
           <div class="vt-equip-badge">Trang Bị: Sale Page</div>
         </div>
         <div class="vt-center">Trạm<br>III</div>
-        <div class="vt-col vt-right">
+        <div class="vt-col vt-right col-img">
           <div class="vt-img-card">
             <img src="give2.jpg" alt="Trạm 3">
           </div>
@@ -419,7 +419,7 @@
         top: 0px !important;
         width: 60px !important;
         height: 60px !important;
-        font-size: 0.8rem !important;
+        font-size: 0.65rem !important;
       }
 
       
@@ -430,9 +430,9 @@
 
       /* Fix Dot Text Overflow */
       .vt-center {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
         line-height: 1.1 !important;
-        padding: 5px !important;
+        padding: 0 !important;
       }
 
       .vt-center {
@@ -572,7 +572,7 @@
         top: 0px !important;
         width: 60px !important;
         height: 60px !important;
-        font-size: 0.8rem !important;
+        font-size: 0.65rem !important;
       }
 
       
@@ -583,9 +583,9 @@
 
       /* Fix Dot Text Overflow */
       .vt-center {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
         line-height: 1.1 !important;
-        padding: 5px !important;
+        padding: 0 !important;
       }
 
       .vt-center {
@@ -603,6 +603,11 @@
         box-shadow: 0 0 0 4px var(--c-bg-dark), 0 0 15px rgba(200, 222, 49, 0.8) !important;
       }
 
+      
+      /* Force Image to top on mobile */
+      .col-img { order: 1 !important; }
+      .vt-text { order: 2 !important; }
+
       /* Fix the trophy dot */
       .vt-row:last-child 
       /* Specific fix for START dot */
@@ -610,7 +615,7 @@
         top: 0px !important;
         width: 60px !important;
         height: 60px !important;
-        font-size: 0.8rem !important;
+        font-size: 0.65rem !important;
       }
 
       
@@ -621,9 +626,9 @@
 
       /* Fix Dot Text Overflow */
       .vt-center {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
         line-height: 1.1 !important;
-        padding: 5px !important;
+        padding: 0 !important;
       }
 
       .vt-center {
