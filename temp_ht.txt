@@ -1,0 +1,38 @@
+<section class="section">
+    <div class="container text-center">
+      <div class="section-label mx-auto">GIẢI PHÁP TOÀN DIỆN</div>
+      <h2 class="section-title">🗺️ Bản Đồ Hành Trình Của Khách Hàng</h2>
+      <p class="section-desc mx-auto center-desc">Đây là hành trình chuẩn mực để biến một người lạ trên mạng xã hội thành khách hàng trung thành.</p>
+      
+      <div class="journey-map mt-12 text-left" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div class="j-step">
+          <div class="j-num">1</div>
+          <div class="j-content">
+            <h4>Con Đường (Social Media)</h4>
+            <p>Nơi bạn chia sẻ giá trị miễn phí. FB Cá nhân, TikTok, YouTube. Ai cũng có thể đến — nhưng bạn không sở hữu ai ở đây.</p>
+          </div>
+        </div>
+        
+        <div class="j-step j-highlight">
+          <div class="j-num">2</div>
+          <div class="j-content">
+            <h4>Landing Page</h4>
+            <p>Cánh Cửa sàng lọc người thực sự quan tâm và thu thập thông tin liên lạc. Đây là nơi Landing Page làm việc — <strong>biến người lạ thành lead.</strong></p>
+          </div>
+        </div>
+        
+        <div class="j-step">
+          <div class="j-num">3</div>
+          <div class="j-content">
+            <h4>Phòng Khách (Email List / Zalo Group)</h4>
+            <p>Nơi bạn toàn quyền chủ động. Những người ở đây đã qua màng lọc, có sự tin tưởng nhất định — tỷ lệ mua hàng cao hơn gấp nhiều lần.</p>
+          </div>
+        </div>
+        
+        <div style="background: rgba(200, 222, 49, 0.08); border-left: 4px solid var(--c-lime); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 40px; margin-left: 20px;">
+          <strong style="color: var(--c-lime); display: block; margin-bottom: 8px; font-size: 1rem;">💡 LƯU Ý QUAN TRỌNG:</strong>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">Không nên xây Website ở giai đoạn đầu, mà hãy tập trung hoàn toàn vào <strong>Landing Page</strong>. Vì Website chứa quá nhiều thông tin khiến khách hàng bị phân tâm, trong khi Landing Page là một luồng đi duy nhất hướng tới việc chốt Sale hoặc lấy Data.</p>
+        </div>
+      </div>
+    </div>
+  </section>

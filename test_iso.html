@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { background: #012822; color: white; font-family: sans-serif; }
+  .iso-map {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3 / 4;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.02);
+    border: 1px dashed #444;
+  }
+  .road-svg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    overflow: visible;
+  }
+  .card {
+    position: absolute;
+    background: #023830;
+    border: 1px solid #C8DE31;
+    padding: 20px;
+    width: 200px;
+  }
+  .dot {
+    position: absolute;
+    width: 40px; height: 40px; background: #C8DE31; color: #023830;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: bold; transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<body>
+  <div class='iso-map'>
+    <svg class='road-svg' viewBox='0 0 100 100' preserveAspectRatio='none'>
+      <path d='M 50 12 L 65 32 L 35 52 L 65 72 L 50 90' fill='none' stroke='#000' stroke-width='60' transform='translate(0,8)' vector-effect='non-scaling-stroke' stroke-linejoin='round' />
+      <path d='M 50 12 L 65 32 L 35 52 L 65 72 L 50 90' fill='none' stroke='#C8DE31' stroke-width='60' vector-effect='non-scaling-stroke' stroke-linejoin='round' />
+      <path d='M 50 12 L 65 32 L 35 52 L 65 72 L 50 90' fill='none' stroke='#023830' stroke-width='50' vector-effect='non-scaling-stroke' stroke-linejoin='round' />
+      <path d='M 50 12 L 65 32 L 35 52 L 65 72 L 50 90' fill='none' stroke='#C8DE31' stroke-width='4' stroke-dasharray='10 10' vector-effect='non-scaling-stroke' stroke-linejoin='round' />
+    </svg>
+    
+    <div class='card' style='top: 12%; left: 50%; transform: translate(-50%, -50%);'>START</div>
+    
+    <div class='dot' style='top: 32%; left: 65%;'>I</div>
+    <div class='card' style='top: 32%; left: 65%; transform: translate(30px, -50%);'>Stage 1</div>
+    
+    <div class='dot' style='top: 52%; left: 35%;'>II</div>
+    <div class='card' style='top: 52%; left: 35%; transform: translate(calc(-100% - 30px), -50%);'>Stage 2</div>
+    
+    <div class='dot' style='top: 72%; left: 65%;'>III</div>
+    <div class='card' style='top: 72%; left: 65%; transform: translate(30px, -50%);'>Stage 3</div>
+    
+    <div class='card' style='top: 90%; left: 50%; transform: translate(-50%, -50%);'>END</div>
+  </div>
+</body>
+</html>

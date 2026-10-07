@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bản Đồ Cho Solo-Expert: Làm Chủ Phễu Chuyển Đổi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating reading progress bar -->
+  <div id="progress"></div>
+
+  <!-- Sticky Bottom Bar -->
+  <div id="abs-bar">
+    <div class="abs-content">
+      <div class="abs-text">
+        <div class="abs-tag">Focus Camp</div>
+        <div>Xây Dựng 3 Trạm Chuyển Đổi Từ Khán Giả Thành Khách Trả Phí</div>
+      </div>
+      <div class="abs-actions">
+        <a href="#quiz" class="btn-primary-small btn-super-glow">Khám Phá Focus Camp →</a>
+        <button onclick="closeBar()" class="btn-close">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero hero-lime text-center" style="position: relative; overflow: hidden; padding: 120px 0 80px; min-height: calc(100vh - 100px); display: flex; flex-direction: column; justify-content: center; background: radial-gradient(circle at 50% 0%, #dcf065 0%, var(--c-lime) 60%);">
+  <div class="hero-glow"></div>
+  <div class="hero-glow glow-2"></div>
+  <div class="container hero-container animate-fade-up" style="text-align: center; position: relative; z-index: 2;">
+      <div class="hero-eyebrow" style="margin-bottom: 16px; font-size: 1.1rem; letter-spacing: 0.1em;">Bản đồ chiến lược 2027</div>
+      <h1 class="hero-title" style="font-size: 3.8rem; margin-bottom: 24px; line-height: 1.15;">Bạn Giỏi Nghề.<br>Nhưng Không Ai Hiểu<br><span class="text-dark" style="display: inline-block; font-size: 0.85em; margin-top: 20px; font-weight: 900; text-transform: uppercase; color: var(--c-lime); background: var(--c-bg-dark); padding: 4px 20px 8px; border-radius: 12px; letter-spacing: 0.02em; white-space: nowrap; box-shadow: 0 10px 30px rgba(2, 56, 48, 0.2);"><span id="typewriter">BẠN ĐANG BÁN GÌ?</span><span class="cursor">|</span></span></h1>
+      <p class="hero-subtitle mx-auto" style="font-size: 1.6rem; margin-bottom: 32px; max-width: 800px; line-height: 1.6;">Để Từ Người Xem Trở Thành Khách Hàng Là Cả Một Hành Trình,<br>Họ Cần Được Bạn Dẫn Đường.</p>
+      <div class="hero-btn-wrapper" style="margin-top: 20px;">
+          <a href="#timeline" class="btn-primary-large btn-pulse-glow hero-bounce-btn" style="display: inline-flex; align-items: center; justify-content: center;">Khám Phá Hành Trình Dẫn Dắt Từ Khán Giả Thành Khách Trả Phí <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
+        </div>
+    </div>
+  </header>
+
+  <div class="divider-fancy"></div>
+
+  <!-- SECTION 3: ELEGANT TIMELINE -->
+  <section class="section vt-section" id="timeline">
+    <div class="container text-center" style="margin-bottom: 60px;">
+      <div class="section-label mx-auto">Từ Người Xem Đến Khách Trả Phí</div>
+      <h2 class="section-title">Người Xem Không Mua Ngay.<br>Họ Cần Dẫn Dắt Qua 3 Trạm Chuyển Đổi.</h2>
+    </div>
+
+    <div class="vt-wrap">
+      
+      <!-- ABSOLUTE START -->
+      <div class="vt-center vt-start-dot" style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 10; font-size: 1.2rem; width: 80px; height: 80px;">START</div>
+
+      <!-- INLINE SVG TRACK -->
+      <svg class="vt-svg-track" width="160" height="100%" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; pointer-events: none;">
+        <!-- Base Track (Dim) -->
+        <path id="vt-track-base-thick" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16" stroke-linecap="round"/>
+        <path id="vt-track-base-thin" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6" stroke-linecap="round"/>
+        
+        <!-- Lit Track (Bright) -->
+        <path id="vt-track-lit-thick" fill="none" stroke="rgba(200, 222, 49, 0.4)" stroke-width="16" stroke-linecap="round"/>
+        <path id="vt-track-lit-thin" fill="none" stroke="var(--c-lime)" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      
+      <!-- THE DRIVING CAR -->
+      <div id="vt-car" style="position: absolute; top: 0; left: 50%; width: 50px; height: 50px; margin-left: -25px; margin-top: -25px; z-index: 15; font-size: 2.5rem; display: flex; align-items: center; justify-content: center; transform-origin: center; will-change: transform; text-shadow: 0 5px 15px rgba(0,0,0,0.4);">🚗</div>
+
+      <!-- ROW 0: START -->
+      <div class="vt-row">
+        <div class="vt-col vt-left">
+          <div class="vt-img-card">
+            <img src="mecung.jpg" alt="Trạm 0">
+          </div>
+        </div>
+        <div class="vt-center" style="width: 40px; height: 40px; border: none !important; background: transparent !important; box-shadow: none !important;"></div>
+        <div class="vt-col vt-right vt-text">
+          <div class="vt-sub">&bull; ĐIỂM BẮT ĐẦU</div>
+          <h3 class="vt-title">Mê Cung Social</h3>
+          <p class="vt-desc">Kênh Social thực chất là một <strong>mê cung nội dung khổng lồ</strong>. Khách hàng lướt qua hàng ngàn thông tin mỗi ngày. Nếu bạn chỉ thu hút sự chú ý mà <strong>không tạo ra lối đi rõ ràng</strong>, họ sẽ <strong>đi lạc và biến mất mãi mãi</strong>.</p>
+        </div>
+      </div>
+
+      <!-- ROW 1: CHANG 1 -->
+      <div class="vt-row">
+        <div class="vt-col vt-left vt-text" style="text-align: right;">
+          <h3 class="vt-title">Kết Nối</h3>
+          <p class="vt-desc">Kết nối ở đây <strong>không phải là một nút bấm "Follow" vô hồn</strong>. Đây là nơi khách hàng <strong>cởi bỏ sự đề phòng, bước vào thế giới quan của bạn</strong> và thực sự hiểu rõ bạn là ai trước khi bất kỳ giao dịch nào diễn ra.</p>
+          <div class="vt-equip-badge">Trang Bị: Personal Hub</div>
+        </div>
+        <div class="vt-center">Trạm<br>I</div>
+        <div class="vt-col vt-right">
+          <div class="vt-img-card">
+            <img src="connect_clean.jpg" alt="Trạm 1">
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2: CHANG 2 -->
+      <div class="vt-row">
+        <div class="vt-col vt-left">
+          <div class="vt-img-card">
+            <img src="gi1.jpg" alt="Trạm 2">
+          </div>
+        </div>
+        <div class="vt-center">Trạm<br>II</div>
+        <div class="vt-col vt-right vt-text">
+          <h3 class="vt-title">Cho &amp; Nhận</h3>
+          <p class="vt-desc"><strong>Niềm tin không sinh ra từ lời hứa, mà từ trải nghiệm thật</strong>. Việc trao đi một giá trị nhỏ giúp giải quyết đúng một mảnh ghép nỗi đau sẽ <strong>xóa bỏ hoàn toàn rào cản hoài nghi</strong>. Họ nhận được kết quả, còn bạn nhận được <strong>sự tín nhiệm tuyệt đối</strong>.</p>
+          <div class="vt-equip-badge">Trang Bị: Bộ Cẩm Nang & Công Cụ</div>
+        </div>
+      </div>
+
+      <!-- ROW 3: CHANG 3 -->
+      <div class="vt-row">
+        <div class="vt-col vt-left vt-text" style="text-align: right;">
+          <h3 class="vt-title">Cùng Đến Đích</h3>
+          <p class="vt-desc">Lúc này, khách hàng đã có kết nối, đã tin tưởng vào năng lực của bạn nhưng họ cần <strong>hiểu rõ về sản phẩm của bạn, về giải pháp bạn đưa ra</strong> cho họ để sẵn sàng đồng hành cùng bạn. Nếu bạn không có một <strong>lời chào hàng mạnh mẽ</strong>, khách hàng sẽ <strong>mua từ đối thủ dù rất yêu thích bạn</strong>.</p>
+          <div class="vt-equip-badge">Trang Bị: Sale Page</div>
+        </div>
+        <div class="vt-center">Trạm<br>III</div>
+        <div class="vt-col vt-right">
+          <div class="vt-img-card">
+            <img src="give2.jpg" alt="Trạm 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 4: END -->
+      <div class="vt-row" style="margin-bottom: 0;">
+        <div class="vt-col vt-left"></div>
+        <div class="vt-center" style="font-size: 3rem; border-width: 4px;">🏆</div>
+        <div class="vt-col vt-right vt-text">
+          <div class="vt-sub">&bull; MỤC TIÊU CUỐI</div>
+          <h3 class="vt-title">Khách Trả Phí</h3>
+          <p class="vt-desc">Khách hàng <strong>thoát khỏi bế tắc</strong>. Còn bạn có được một <strong>khách hàng trung thành thực thụ</strong>.</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 80px; position: relative; z-index: 10;">
+        <a href="#quiz" class="btn-primary-large btn-super-glow" style="font-size: 1.2rem; padding: 18px 36px; display: inline-block;">Tôi Muốn Xây Dựng 3 Trạm Chuyển Đổi Ngay &rarr;</a>
+      </div>
+      
+    </div>
+  </section>
+  <!-- QUOTE BRIDGE SECTION -->
+  <section class="parallax-solution">
+    <div class="parallax-overlay">
+      <div class="container">
+        <div class="glass-quote-card">
+          <div class="callout-label text-lime">Nguyên Lý Cốt Lõi</div>
+          <p class="callout-text">"Bạn không cần chạy quảng cáo nhiều hơn hay đăng bài liên tục hơn — bạn cần một <strong>hệ thống dẫn đường</strong> để khách tự đi từ người xem đến người mua, kể cả khi bạn không có mặt."</p>
+        </div>
+      </div>
+    </div>
+  </section>\n\n<!-- SECTION 2: QUIZ -->
+  <section class="section bg-cream" id="quiz">
+    <div class="container text-center">
+      <div class="section-label mx-auto" style="color: var(--c-bg-dark);">CÔNG CỤ TỰ CHẨN ĐOÁN</div>
+      <h2 class="section-title" style="color: var(--c-bg-dark);">Bạn Là Kiểu Người Dẫn Đường Nào<br>Trong Mắt Khách Hàng?</h2>
+      <p class="section-desc mx-auto center-desc" style="color: rgba(0,0,0,0.6); max-width: 600px; font-size: 1.15rem; margin-bottom: 30px;">
+        9 câu, khoảng 2 phút. Bạn sẽ biết mình là kiểu người dẫn đường nào, đang lạc khách ở trạm nào, cần làm gì tiếp theo.
+      </p>
+
+      
+        <div class="archetype-preview" style="margin-bottom: 40px; margin-top: 40px;">
+          <div class="archetype-grid">
+            <div class="arch-card">
+              <img src="lukhach.webp" alt="Lữ Khách">
+            </div>
+            <div class="arch-card">
+              <img src="star.webp" alt="Ngôi Sao">
+            </div>
+            <div class="arch-card">
+              <img src="phapsu.webp" alt="Học Giả">
+            </div>
+            <div class="arch-card">
+              <img src="king.webp" alt="Người Dẫn Đường">
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="quiz-container mx-auto mt-12" style="max-width: 880px; background: #fff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.05); border-radius: 24px; padding: 40px; text-align: left; box-shadow: 0 30px 60px rgba(0,0,0,0.2); position: relative; min-height: 400px;">
+        
+        <!-- Quiz UI -->
+        <div id="quiz-ui">
+          <div class="quiz-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <button id="btn-prev-question" style="background: none; border: none; color: var(--c-bg-dark); cursor: pointer; font-size: 1rem; display: none;">&larr; Quay lại</button>
+            <div id="quiz-progress-text" style="color: rgba(0,0,0,0.5); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; margin-left: auto;">Câu 1/9</div>
+          </div>
+          
+          <div class="quiz-progress-bar" style="width: 100%; height: 4px; background: rgba(0,0,0,0.1); border-radius: 4px; margin-bottom: 32px; overflow: hidden;">
+            <div id="quiz-progress-fill" style="width: 11.11%; height: 100%; background: var(--c-bg-dark); transition: width 0.3s ease;"></div>
+          </div>
+
+          <div id="quiz-questions-container">
+            <!-- Q1 -->
+            <div class="quiz-step" data-step="1">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">1. Một người lạ thấy bài đăng của bạn và muốn biết bạn là ai, làm nghề bao lâu, từng giúp ai. Họ tìm ở đâu?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Chỉ có thể lướt lại các bài đăng cũ</div>
+                <div class="quiz-opt" data-val="1">Phần giới thiệu ngắn trên trang mạng xã hội</div>
+                <div class="quiz-opt" data-val="2">Một trang riêng tổng hợp hành trình, thành tựu và câu chuyện của tôi</div>
+              </div>
+            </div>
+            <!-- Q2 -->
+            <div class="quiz-step" data-step="2" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">2. Khi có người hỏi "Bạn làm gì vậy?", bạn mất bao lâu để họ hiểu?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Vài phút, và thường phải giải thích lại nhiều lần</div>
+                <div class="quiz-opt" data-val="1">Giải thích được, nhưng mỗi lần nói một kiểu</div>
+                <div class="quiz-opt" data-val="2">Một câu là họ hiểu, hoặc tôi gửi một đường dẫn là đủ</div>
+              </div>
+            </div>
+            <!-- Q3 -->
+            <div class="quiz-step" data-step="3" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">3. Khi người mới muốn biết bạn đã giúp được ai, họ xem gì?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Chờ họ hỏi rồi tôi mới nhắn vài hình ảnh, tin nhắn cảm ơn</div>
+                <div class="quiz-opt" data-val="1">Có vài bài đăng phản hồi của khách rải rác trên kênh</div>
+                <div class="quiz-opt" data-val="2">Có một nơi tổng hợp kết quả, lời khách và thành tựu để họ tự xem</div>
+              </div>
+            </div>
+            <!-- Q4 -->
+            <div class="quiz-step" data-step="4" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">4. Khi khách muốn tìm hiểu sản phẩm của bạn, họ làm gì?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Inbox hỏi tôi, và tôi chưa có gì sẵn để gửi</div>
+                <div class="quiz-opt" data-val="1">Tôi tư vấn từng người, mỗi lần giải thích lại từ đầu</div>
+                <div class="quiz-opt" data-val="2">Họ có một trang hoặc tài liệu để tự đọc trước, rồi mới đặt lịch hoặc mua khi đã hiểu</div>
+              </div>
+            </div>
+            <!-- Q5 -->
+            <div class="quiz-step" data-step="5" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">5. Khách muốn mua nhưng ngại hỏi giá hoặc ngại nhắn tin. Họ tìm hiểu bằng cách nào?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Không có cách nào khác, họ phải hỏi trực tiếp tôi</div>
+                <div class="quiz-opt" data-val="1">Họ phải qua buổi tư vấn mới biết mức đầu tư</div>
+                <div class="quiz-opt" data-val="2">Trang của tôi có bảng giá, hoặc nói rõ khoảng đầu tư, ai phù hợp và quy trình, để họ tự biết có nên đặt lịch không</div>
+              </div>
+            </div>
+            <!-- Q6 -->
+            <div class="quiz-step" data-step="6" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">6. Khách quan tâm vào lúc bạn đang bận hoặc đã ngủ. Họ làm được gì?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Chờ tôi trả lời hôm sau</div>
+                <div class="quiz-opt" data-val="1">Để lại tin nhắn hoặc thông tin, tôi liên hệ sau</div>
+                <div class="quiz-opt" data-val="2">Tự xem đủ thông tin và đặt lịch hoặc mua ngay, tuỳ loại sản phẩm</div>
+              </div>
+            </div>
+            <!-- Q7 -->
+            <div class="quiz-step" data-step="7" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">7. Người xem thích nội dung của bạn nhưng chưa sẵn sàng mua. Họ có thể nhận gì từ bạn để thấy bạn thật sự giỏi?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Chỉ có các bài đăng hằng ngày</div>
+                <div class="quiz-opt" data-val="1">Có tài liệu hoặc bài viết hay nhưng rải rác, khó tìm</div>
+                <div class="quiz-opt" data-val="2">Có ít nhất một món quà cụ thể (checklist, công cụ, template, hướng dẫn...) mà ai cũng lấy được</div>
+              </div>
+            </div>
+            <!-- Q8 -->
+            <div class="quiz-step" data-step="8" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">8. Món quà miễn phí của bạn (nếu có) được thiết kế từ đâu?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Tôi chưa có quà tặng nào</div>
+                <div class="quiz-opt" data-val="1">Từ thứ tôi thấy hay hoặc dễ làm</div>
+                <div class="quiz-opt" data-val="2">Từ một vấn đề cụ thể mà khách đang gặp</div>
+              </div>
+            </div>
+            <!-- Q9 -->
+            <div class="quiz-step" data-step="9" style="display: none;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">9. Sau khi ai đó dùng món quà của bạn, điều gì xảy ra?</h3>
+              <div class="quiz-options">
+                <div class="quiz-opt" data-val="0">Tôi không có cách nào biết họ có dùng hay không</div>
+                <div class="quiz-opt" data-val="1">Thỉnh thoảng có người nhắn khen hoặc hỏi thêm, nhưng ngẫu nhiên</div>
+                <div class="quiz-opt" data-val="2">Quà dẫn họ tới bước tiếp theo rõ ràng (xem trang giới thiệu, đặt lịch, hỏi thêm) và tôi thấy có người nói "nhờ món này mà biết đến bạn"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Loading -->
+        <div id="quiz-loading-area" style="display: none; animation: fadeIn 0.5s; text-align: center; padding: 60px 0;">
+          <div style="position: relative; width: 80px; height: 80px; margin: 0 auto;">
+            <!-- Outer spinning ring -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid rgba(2,56,48,0.1); border-top: 3px solid var(--c-bg-dark); border-radius: 50%; animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;"></div>
+            <!-- Inner spinning ring reverse -->
+            <div style="position: absolute; top: 15px; left: 15px; width: 50px; height: 50px; border: 2px solid rgba(200,222,49,0.2); border-bottom: 2px solid var(--c-lime-dark); border-radius: 50%; animation: spin 1s linear infinite reverse;"></div>
+            <!-- Center dot -->
+            <div style="position: absolute; top: 35px; left: 35px; width: 10px; height: 10px; background: var(--c-bg-dark); border-radius: 50%; animation: pulse-mystic 2s ease-in-out infinite;"></div>
+          </div>
+          <div id="loading-text" style="margin-top: 30px; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--c-bg-dark); font-weight: 700; letter-spacing: 1px;">Đang giải mã chân dung...</div>
+          <div id="loading-sub" style="font-size: 0.95rem; color: rgba(0,0,0,0.5); margin-top: 8px; font-style: italic; transition: opacity 0.3s;">Khởi tạo ma trận phân tích</div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div id="quiz-result-area" style="display: none; animation: fadeIn 0.5s; text-align: center;">
+          <div style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(0,0,0,0.5); font-weight: 700; margin-bottom: 30px;">Chân dung hiện tại của bạn</div>
+          
+          <h3 id="res-name" style="font-size: 2.2rem; color: var(--c-bg-dark); margin-bottom: 12px; font-family: 'Playfair Display', serif; font-weight: 700;">Tên danh xưng</h3>
+          
+          <div id="res-img-container" style="margin-bottom: 24px;">
+            <img id="res-img" src="" alt="" style="max-width: 260px; height: auto; filter: drop-shadow(0 15px 30px rgba(2,56,48,0.3)); margin-top: 10px; transition: transform 0.3s ease;">
+          </div>
+          
+          <p id="res-desc-top" style="font-size: 1.15rem; color: var(--c-bg-dark); max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;"></p>
+
+          <!-- Radar Triangle Chart -->
+          <div style="max-width: 560px; margin: 0 auto 10px auto; text-align: center;">
+            <svg id="radar-chart" viewBox="0 -35 480 345" style="width: 100%; height: auto; overflow: visible;">
+              <!-- cx=240, cy=190, r=140 -->
+              <!-- Axis lines from center -->
+              <line x1="240" y1="190" x2="240" y2="50"  stroke="rgba(0,0,0,0.07)" stroke-width="1.5"/>
+              <line x1="240" y1="190" x2="361" y2="260" stroke="rgba(0,0,0,0.07)" stroke-width="1.5"/>
+              <line x1="240" y1="190" x2="119" y2="260" stroke="rgba(0,0,0,0.07)" stroke-width="1.5"/>
+              <!-- Grid at 2/6 -->
+              <polygon points="240,143 280,219 200,219" fill="none" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+              <!-- Grid at 4/6 -->
+              <polygon points="240,96  320,236 160,236" fill="none" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+              <!-- Outer reference triangle at 6/6 (dashed) -->
+              <polygon points="240,50  361,260 119,260" fill="none" stroke="rgba(0,0,0,0.13)" stroke-width="1.5" stroke-dasharray="5,4"/>
+              <!-- Score polygon — animated by JS -->
+              <polygon id="radar-score"
+                points="240,190 240,190 240,190"
+                fill="rgba(4,88,76,0.18)"
+                stroke="var(--c-bg-dark)"
+                stroke-width="3"
+                stroke-linejoin="round"/>
+              <!-- Score vertex dots -->
+              <circle id="radar-dot-0" cx="240" cy="190" r="14" fill="var(--c-bg-dark)"/>
+              <circle id="radar-dot-1" cx="240" cy="190" r="14" fill="var(--c-bg-dark)"/>
+              <circle id="radar-dot-2" cx="240" cy="190" r="14" fill="var(--c-bg-dark)"/>
+              <!-- Score numbers inside dots -->
+              <text id="radar-lbl-0" x="240" y="195" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter,sans-serif">0</text>
+              <text id="radar-lbl-1" x="240" y="195" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter,sans-serif">0</text>
+              <text id="radar-lbl-2" x="240" y="195" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter,sans-serif">0</text>
+              <!-- Category labels -->
+              <!-- TOP: Kết Nối -->
+              <text x="240" y="-14" text-anchor="middle" fill="var(--c-bg-dark)" font-size="12" font-weight="700" font-family="Inter,sans-serif">TRẠM I</text>
+              <text x="240" y="10" text-anchor="middle" fill="var(--c-bg-dark)" font-size="19" font-weight="700" font-family="Playfair Display,serif">Kết Nối</text>
+              <text x="240" y="30" text-anchor="middle" fill="rgba(0,0,0,0.45)" font-size="12" font-family="Inter,sans-serif">khách biết bạn là ai và cảm thấy gần bạn</text>
+              <!-- BR: Cùng Đến Đích -->
+              <text x="378" y="240" text-anchor="start" fill="var(--c-bg-dark)" font-size="12" font-weight="700" font-family="Inter,sans-serif">TRẠM III</text>
+              <text x="378" y="264" text-anchor="start" fill="var(--c-bg-dark)" font-size="19" font-weight="700" font-family="Playfair Display,serif">Cùng Đến Đích</text>
+              <text x="378" y="284" text-anchor="start" fill="rgba(0,0,0,0.45)" font-size="12" font-family="Inter,sans-serif">khách trả phí để</text>
+              <text x="378" y="302" text-anchor="start" fill="rgba(0,0,0,0.45)" font-size="12" font-family="Inter,sans-serif">giải quyết vấn đề</text>
+              <!-- BL: Cho & Nhận -->
+              <text x="102" y="240" text-anchor="end" fill="var(--c-bg-dark)" font-size="12" font-weight="700" font-family="Inter,sans-serif">TRẠM II</text>
+              <text x="102" y="264" text-anchor="end" fill="var(--c-bg-dark)" font-size="19" font-weight="700" font-family="Playfair Display,serif">Cho &amp; Nhận</text>
+              <text x="102" y="284" text-anchor="end" fill="rgba(0,0,0,0.45)" font-size="12" font-family="Inter,sans-serif">khách nhận trải nghiệm,</text>
+              <text x="102" y="302" text-anchor="end" fill="rgba(0,0,0,0.45)" font-size="12" font-family="Inter,sans-serif">trao niềm tin</text>
+            </svg>
+          </div>
+
+          <p id="res-desc-bottom" style="font-size: 1.1rem; color: rgba(0,0,0,0.8); max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">Mô tả...</p>
+
+          <div class="mystic-card">
+            <p id="res-note" style="font-size: 1.05rem; line-height: 1.7; position: relative; z-index: 2; margin: 0; text-align: justify;"></p>
+          </div>
+
+          <div style="max-width: 600px; margin: 0 auto;">
+            <a href="#" id="res-btn" class="btn-primary-large btn-pulse-glow" style="display: inline-block; width: 100%; text-align: center; padding: 16px 20px; font-size: 1.05rem; margin-bottom: 16px;"></a>
+            <button id="btn-retake" style="background: none; border: none; color: rgba(0,0,0,0.5); text-decoration: underline; cursor: pointer; font-size: 0.95rem; display: inline-block; padding: 8px;">Làm Lại Quiz</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="script.js"></script>
+
+  <style>
+
+        /* ELEGANT TIMELINE */
+    .vt-section { padding: 80px 0; background: var(--c-bg-dark); }
+    .vt-wrap {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    
+    .vt-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .vt-col { width: calc(50% - 70px); }
+    .vt-left { padding-right: 40px; }
+    .vt-right { padding-left: 40px; }
+    
+        
+      /* Specific fix for START dot */
+      .vt-start-dot {
+        top: 0px !important;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 0.8rem !important;
+      }
+
+      .vt-center {
+      width: 90px; height: 90px;
+      background: var(--c-bg-dark);
+      border: 3px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-weight: 700;
+      color: rgba(255,255,255,0.2);
+      font-size: 1.2rem;
+      z-index: 10;
+      box-shadow: 0 0 0 6px var(--c-bg-dark);
+      transition: all 0.4s ease;
+    }
+    .vt-center.vt-active {
+      border-color: var(--c-lime);
+      color: var(--c-bg-dark);
+      background: var(--c-lime);
+      box-shadow: 0 0 0 6px var(--c-bg-dark), 0 0 20px rgba(200, 222, 49, 0.8);
+    }
+    .vt-start-dot {
+      font-size: 1.2rem;
+    }
+    
+    /* Text Styles */
+    .vt-text { display: flex; flex-direction: column; justify-content: center; }
+    .vt-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--c-lime);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .vt-equip-badge {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: var(--c-lime);
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--c-bg-dark);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 5px 15px rgba(200, 222, 49, 0.3);
+    }
+
+    .vt-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .vt-desc {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .vt-desc strong { color: #fff; font-weight: 700; }
+    
+    /* Images */
+    .vt-img-card {
+      background: var(--c-bg-dark);
+      border: 4px solid var(--c-lime);
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+    }
+    .vt-img-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+    /* Badge over line */
+    .vt-badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+      position: relative;
+      z-index: 5;
+    }
+    .vt-badge {
+      background: var(--c-lime);
+      color: var(--c-bg-dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      padding: 6px 24px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* Maze inside image card */
+    .vt-maze { width: 100%; padding: 20px; background: rgba(200, 222, 49, 0.05); border-radius: 4px; }
+    .vt-maze line { stroke: rgba(200, 222, 49, 0.3); stroke-width: 2; stroke-linecap: square; }
+    .vt-maze path { stroke: rgba(200, 222, 49, 0.6); stroke-width: 3; stroke-linecap: round; }
+    .vt-maze-icons span { position: absolute; font-size: 1.2rem; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .vt-wrap { padding: 20px 10px; overflow: hidden; }
+      
+      /* Shift SVG to left edge */
+      .vt-svg-track {
+        left: 0 !important;
+        transform: translateX(-40px) !important;
+      }
+      #vt-svg-container {
+        left: 0 !important;
+        transform: translateX(-40px) !important;
+      }
+
+      /* Stack content to the right */
+      .vt-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding-left: 70px !important;
+        position: relative !important;
+        margin-bottom: 50px !important;
+      }
+
+      /* Place dots on the line */
+      
+      /* Specific fix for START dot */
+      .vt-start-dot {
+        top: 0px !important;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 0.8rem !important;
+      }
+
+      .vt-center {
+        position: absolute !important;
+        left: 40px !important;
+        top: 20px !important;
+        transform: translateX(-50%) !important;
+        width: 60px !important; 
+        height: 60px !important;
+        font-size: 1rem !important;
+        z-index: 10 !important;
+        box-shadow: 0 0 0 4px var(--c-bg-dark) !important;
+      }
+      .vt-center.vt-active {
+        box-shadow: 0 0 0 4px var(--c-bg-dark), 0 0 15px rgba(200, 222, 49, 0.8) !important;
+      }
+
+      /* Fix the trophy dot */
+      .vt-row:last-child 
+      /* Specific fix for START dot */
+      .vt-start-dot {
+        top: 0px !important;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 0.8rem !important;
+      }
+
+      .vt-center {
+        font-size: 1.8rem !important;
+        border-width: 2px !important;
+        top: 0 !important;
+      }
+
+      /* Reset columns */
+      .vt-col { width: 100% !important; padding: 0 !important; margin-left: 0 !important; }
+      .vt-left.vt-text, .vt-right.vt-text { text-align: left !important; }
+      .vt-img-card { margin-bottom: 20px !important; }
+      .vt-title { font-size: 1.6rem !important; }
+      
+      /* Fix Archetype cards on mobile */
+      .archetype-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+      .arch-card { padding: 0 !important; }
+      .arch-name { font-size: 0.95rem !important; }
+      .arch-desc { font-size: 0.8rem !important; }
+    }
+  /* CSS for New Quiz */
+    .quiz-opt {
+      padding: 18px 24px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 14px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      font-size: 1.05rem;
+      color: rgba(0,0,0,0.85);
+      line-height: 1.5;
+      position: relative;
+      overflow: hidden;
+    }
+    .quiz-opt::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0; width: 6px;
+      background: var(--c-lime);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+      transform-origin: center;
+    }
+    .quiz-opt:hover {
+      background: rgba(200, 222, 49, 0.05);
+      border-color: var(--c-lime);
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      color: var(--c-bg-dark);
+      font-weight: 500;
+    }
+    .quiz-opt:hover::before {
+      transform: scaleY(1);
+    }
+    .quiz-opt.selected {
+      background: var(--c-bg-dark);
+      border-color: var(--c-bg-dark);
+      color: #fff;
+      transform: translateX(8px);
+    }
+    .quiz-opt.selected::before {
+      transform: scaleY(1);
+      background: var(--c-lime);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse-mystic {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.95); }
+    }
+
+    .mystic-card {
+      background: linear-gradient(135deg, #023830 0%, #04584c 100%);
+      border: 1px solid rgba(200, 222, 49, 0.3);
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 15px 35px rgba(2, 56, 48, 0.4), inset 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: left;
+    }
+    .mystic-card::before {
+      content: '“';
+      position: absolute;
+      top: -20px;
+      left: 15px;
+      font-size: 8rem;
+      color: rgba(200, 222, 49, 0.1);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+    }
+    .mystic-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(200,222,49,0.05)"/></svg>');
+      pointer-events: none;
+    }
+    /* Note: Since the quote has inline styles, we use !important to override them for the mystic card */
+    #res-note strong {
+      color: var(--c-lime) !important;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem !important;
+      line-height: 1.4 !important;
+      display: block;
+      margin-bottom: 20px !important;
+      text-align: center;
+      
+      font-weight: 700 !important;
+    }
+
+    .result-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+    .result-hero-img img {
+      max-width: 260px;
+      height: auto;
+      filter: drop-shadow(0 15px 30px rgba(2,56,48,0.3));
+      transition: transform 0.3s ease;
+    }
+    .result-hero-text h3 {
+      font-size: 2.2rem;
+      color: var(--c-bg-dark);
+      margin-bottom: 16px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    .result-hero-text p {
+      font-size: 1.1rem;
+      color: rgba(0,0,0,0.8);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .result-hero {
+        flex-direction: row;
+        text-align: left;
+        gap: 50px;
+        align-items: center;
+      }
+      .result-hero-img {
+        flex: 0 0 280px;
+      }
+      .result-hero-img img {
+        max-width: 100%;
+      }
+      .result-hero-text {
+        flex: 1;
+      }
+      .result-hero-text h3 {
+        font-size: 2.8rem;
+      }
+      .result-hero-text p {
+        font-size: 1.15rem;
+      }
+    }
+  
+    /* --- GLOBAL MOBILE OPTIMIZATIONS --- */
+    @media (max-width: 768px) {
+
+      .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .arch-card {
+      border-radius: 16px;
+      padding: 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      border: 3px solid rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--c-bg-dark);
+    }
+    .arch-card:hover {
+      transform: translateY(-10px) rotate(2deg);
+      border-color: var(--c-lime);
+      box-shadow: 0 20px 40px rgba(200, 222, 49, 0.4);
+    }
+    .arch-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+      .vt-title { font-size: 1.8rem !important; }
+      .vt-desc { font-size: 1rem !important; }
+      .vt-equip-badge { font-size: 0.85rem !important; padding: 8px 14px !important; }
+
+      .hero-title { font-size: 2.2rem !important; }
+      .hero-title span { font-size: 1rem !important; min-height: 1.5em !important; }
+      .hero-subtitle { font-size: 1.1rem !important; padding: 0 15px; }
+      .hero { padding: 40px 10px 20px !important; min-height: auto !important; }
+      .section { padding: 40px 15px !important; }
+      .section-title { font-size: 1.8rem !important; }
+      .section-desc { font-size: 1rem !important; padding: 0 10px; }
+      .btn-primary-large { font-size: 1rem !important; padding: 14px 24px !important; white-space: normal !important; height: auto !important; }
+      .mystic-card { padding: 20px 15px !important; border-radius: 12px !important; }
+      .mystic-card::before { top: -15px !important; font-size: 1.5rem !important; }
+      .quiz-opt { padding: 14px 16px !important; font-size: 0.95rem !important; }
+      .result-hero-text h3 { font-size: 1.8rem !important; }
+    }
+
+  
+    .btn-super-glow {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(200, 222, 49, 0.5);
+      animation: pulse-glow 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .btn-super-glow:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 25px rgba(200, 222, 49, 0.8), inset 0 0 10px rgba(255,255,255,0.5);
+    }
+    .btn-super-glow:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 0 10px rgba(200, 222, 49, 0.4);
+    }
+    .btn-super-glow::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(30deg) translate(-100%, -100%);
+      transition: all 0.5s;
+    }
+    .btn-super-glow:hover::after {
+      animation: shine 1.5s infinite;
+    }
+    @keyframes shine {
+      0% { transform: rotate(30deg) translate(-100%, -100%); }
+      100% { transform: rotate(30deg) translate(100%, 100%); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 15px rgba(200, 222, 49, 0.4); }
+      50% { box-shadow: 0 0 25px rgba(200, 222, 49, 0.8); }
+    }
+
+  
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .arch-card {
+      border-radius: 16px;
+      padding: 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      border: 3px solid rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--c-bg-dark);
+    }
+    .arch-card:hover {
+      transform: translateY(-10px) rotate(2deg);
+      border-color: var(--c-lime);
+      box-shadow: 0 20px 40px rgba(200, 222, 49, 0.4);
+    }
+    .arch-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+  
+    /* HERO ANIMATIONS & GLOW */
+    .hero-glow {
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+      max-width: 800px;
+      max-height: 800px;
+      background: radial-gradient(circle, rgba(200, 222, 49, 0.12) 0%, rgba(200, 222, 49, 0) 70%);
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      z-index: 1;
+      pointer-events: none;
+      animation: float-glow 8s ease-in-out infinite alternate;
+    }
+    .hero-glow.glow-2 {
+      width: 80vw;
+      height: 80vw;
+      max-width: 1000px;
+      max-height: 1000px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 70%);
+      top: auto;
+      bottom: -40%;
+      animation: float-glow-2 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes float-glow {
+      0% { transform: translate(-50%, 0) scale(1); opacity: 0.8; }
+      100% { transform: translate(-50%, 40px) scale(1.1); opacity: 1; }
+    }
+    @keyframes float-glow-2 {
+      0% { transform: translate(-50%, 0) scale(1); opacity: 0.5; }
+      100% { transform: translate(-45%, -50px) scale(1.2); opacity: 0.8; }
+    }
+
+    .animate-fade-up > * {
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .animate-fade-up > *:nth-child(1) { animation-delay: 0.1s; }
+    .animate-fade-up > *:nth-child(2) { animation-delay: 0.3s; }
+    .animate-fade-up > *:nth-child(3) { animation-delay: 0.5s; }
+    .animate-fade-up > *:nth-child(4) { animation-delay: 0.7s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  
+    /* LIME HERO OVERRIDES */
+    .hero-lime .hero-eyebrow { color: var(--c-bg-dark); opacity: 0.8; font-weight: 800; }
+    .hero-lime .hero-title { color: var(--c-bg-dark); }
+    .hero-lime .hero-subtitle { color: rgba(2, 56, 48, 0.85); font-weight: 500; }
+    .hero-lime .hero-glow {
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .hero-lime .hero-glow.glow-2 {
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .hero-lime .btn-primary-large {
+      background: var(--c-bg-dark);
+      color: var(--c-lime);
+      box-shadow: 0 10px 30px rgba(2, 56, 48, 0.2);
+    }
+    .hero-lime .btn-primary-large:hover {
+      background: #011e19;
+      box-shadow: 0 15px 40px rgba(2, 56, 48, 0.4);
+      color: #fff;
+    }
+    .hero-lime .btn-primary-large::after {
+      background: linear-gradient(to right, rgba(200, 222, 49, 0) 0%, rgba(200, 222, 49, 0.2) 50%, rgba(200, 222, 49, 0) 100%);
+    }
+
+  
+    /* HERO BUTTON BOUNCE */
+    @keyframes bounce-down {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    .hero-bounce-btn {
+      animation: bounce-down 2.5s infinite ease-in-out !important;
+      position: relative;
+    }
+    .hero-bounce-btn svg {
+      animation: bounce-arrow 1.5s infinite ease-in-out;
+    }
+    @keyframes bounce-arrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(3px); }
+    }
+
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const steps = document.querySelectorAll('.quiz-step');
+      const opts = document.querySelectorAll('.quiz-opt');
+      const btnPrev = document.getElementById('btn-prev-question');
+      const progressText = document.getElementById('quiz-progress-text');
+      const progressFill = document.getElementById('quiz-progress-fill');
+      const quizUi = document.getElementById('quiz-ui');
+      const resultArea = document.getElementById('quiz-result-area');
+
+      let currentStep = 1;
+      const totalSteps = 9;
+      const answers = new Array(9).fill(0);
+
+      // Check for saved results
+      try {
+        const savedStr = localStorage.getItem('savedQuizAnswers');
+        if (savedStr) {
+          const savedAnswers = JSON.parse(savedStr);
+          if (Array.isArray(savedAnswers) && savedAnswers.length === 9) {
+            for (let i = 0; i < 9; i++) answers[i] = savedAnswers[i];
+            quizUi.style.display = 'none';
+            resultArea.style.display = 'block';
+            setTimeout(() => { renderFinalResult(); }, 50); // slight delay to ensure DOM is ready
+          }
+        }
+      } catch (e) {
+        console.error("Lỗi đọc cookie:", e);
+      }
+      
+      // Retake button logic
+      const btnRetake = document.getElementById('btn-retake');
+      if (btnRetake) {
+        btnRetake.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('savedQuizAnswers');
+          answers.fill(0);
+          currentStep = 1;
+          opts.forEach(o => o.classList.remove('selected'));
+          resultArea.style.display = 'none';
+          quizUi.style.display = 'block';
+          updateUI();
+          
+          // Reset radar dot highlights if any
+          ['hub', 'sale', 'gift'].forEach((id, i) => {
+             const dot = document.getElementById(`radar-dot-${i}`);
+             if (dot) dot.setAttribute('r', '14');
+          });
+        });
+      }
+
+      function updateUI() {
+        steps.forEach((step, idx) => {
+          if (idx + 1 === currentStep) {
+            step.style.display = 'block';
+            step.style.animation = 'fadeIn 0.4s';
+          } else {
+            step.style.display = 'none';
+          }
+        });
+
+        btnPrev.style.display = currentStep > 1 ? 'inline-block' : 'none';
+        progressText.innerText = `Câu ${currentStep}/9`;
+        progressFill.style.width = `${(currentStep / 9) * 100}%`;
+      }
+
+      if(btnPrev) {
+        btnPrev.addEventListener('click', () => {
+          if (currentStep > 1) {
+            currentStep--;
+            updateUI();
+          }
+        });
+      }
+
+      opts.forEach(opt => {
+        opt.addEventListener('click', function() {
+          const parent = this.closest('.quiz-options');
+          parent.querySelectorAll('.quiz-opt').forEach(o => o.classList.remove('selected'));
+          this.classList.add('selected');
+
+          const val = parseInt(this.getAttribute('data-val'));
+          answers[currentStep - 1] = val;
+
+          setTimeout(() => {
+            if (currentStep < totalSteps) {
+              currentStep++;
+              updateUI();
+            } else {
+              calculateResult();
+            }
+          }, 400);
+        });
+      });
+
+      function calculateResult() {
+        quizUi.style.display = 'none';
+        
+        const loadingArea = document.getElementById('quiz-loading-area');
+        loadingArea.style.display = 'block';
+
+        const subTexts = [
+            "Đang quét Hệ Sinh Thái Personal Hub...",
+            "Đo lường năng lực Chuyển Đổi khách hàng...",
+            "Phân tích đòn bẩy Bộ Quà Tặng...",
+            "Kết nối dữ liệu... Tìm ra chân dung thật của bạn!"
+        ];
+        let textStep = 0;
+        const subEl = document.getElementById('loading-sub');
+        
+        const textInterval = setInterval(() => {
+            subEl.style.opacity = 0;
+            setTimeout(() => {
+                if (textStep < subTexts.length) {
+                    subEl.innerText = subTexts[textStep];
+                    textStep++;
+                }
+                subEl.style.opacity = 1;
+            }, 300);
+        }, 900);
+
+        setTimeout(() => {
+            clearInterval(textInterval);
+            loadingArea.style.display = 'none';
+            resultArea.style.display = 'block';
+            renderFinalResult();
+        }, 4500);
+      }
+
+      function renderFinalResult() {
+        localStorage.setItem("savedQuizAnswers", JSON.stringify(answers));
+        const hubScore = answers[0] + answers[1] + answers[2];
+        const saleScore = answers[3] + answers[4] + answers[5];
+        const giftScore = answers[6] + answers[7] + answers[8];
+        const totalScore = hubScore + saleScore + giftScore;
+
+        let weak = "hub";
+        let minScore = hubScore;
+        if (saleScore < minScore) { weak = "sale"; minScore = saleScore; }
+        if (giftScore < minScore) { weak = "gift"; minScore = giftScore; }
+
+        let persona = "";
+        if (totalScore >= 15) {
+          persona = "authority";
+        } else if (weak === "hub") {
+          persona = "hidden";
+        } else if (weak === "sale") {
+          persona = "star";
+        } else {
+          persona = "keeper";
+        }
+
+        const data = {
+          hidden: {
+            img: "lukhach.webp",
+            name: "Lữ Khách Ẩn Dật",
+            descTop: `<strong style="color:var(--c-bg-dark);">Bạn là một người dẫn đường gần như vô hình. Khách hàng cảm thấy họ đang phải tự dò dẫm đi một mình và hoàn toàn không biết có bạn ở đó để hỏi đường.</strong>`,
+            descBottom: `Bạn giỏi nghề thật. Nhưng người xem chưa hiểu bạn là ai, bạn giúp được gì cho họ, vì sao nên chọn bạn... Bạn cần làm tốt hơn ở trạm <strong>Kết Nối</strong> trong hành trình khách hàng.`,
+            note: `<strong style="display:block; font-size:1.05rem; font-weight:700; color:var(--c-bg-dark); margin-bottom:10px; font-style:normal;">"Khách Hàng Không Chỉ Mua Sản Phẩm, Họ Mua Thế Giới Quan Của Bạn."</strong>Người ta không chọn chuyên gia chỉ vì năng lực, họ chọn người mà họ cảm thấy tin, hiểu và muốn đi cùng. Khi bạn chưa có chỗ để kể câu chuyện của mình, khách hàng không biết họ đang mua thế giới quan của ai.`,
+            btn: "Khám Phá Hệ Thống 3 Trạm Dẫn Dắt Khách Hàng →"
+          },
+          star: {
+            img: "star.webp",
+            name: "Ngôi Sao Thu Hút",
+            descTop: `<strong style="color:var(--c-bg-dark);">Bạn là một người dẫn đường rất nổi bật. Khách hàng đứng ngước nhìn và ngưỡng mộ bạn, nhưng lại không được chỉ cho một con đường rõ ràng để bước tiếp cùng bạn.</strong>`,
+            descBottom: `Người xem thích và khen nội dung của bạn. Nhưng từ 'thích' đến 'mua hàng' vẫn chưa có một con đường kết nối rõ ràng nào. Bạn đang thiếu trạm <strong>Cùng Đến Đích</strong> để chuyển đổi sự quan tâm thành doanh thu.`,
+            note: `<strong style="display:block; font-size:1.05rem; font-weight:700; color:var(--c-bg-dark); margin-bottom:10px; font-style:normal;">"Tập Trung Ở Đâu Thì Phát Triển Ở Đó. Tập Trung Tăng Followers Sẽ Tạo Ra Thêm Followers Chứ Không Phải Doanh Thu!"</strong>Đám đông yêu thích bài của bạn, nhưng họ vẫn <b style="font-weight:700; color:#fff;">tự đi tìm người khác để mua hàng</b>. Bởi bạn chỉ đang tạo chú ý, chứ chưa thể hiện bạn <b style="font-weight:700; color:#fff;">giải quyết vấn đề của họ</b> như thế nào. Khách hàng không thể <b style="font-weight:700; color:#fff;">tự đoán xem bạn đang bán gì</b>. Đã đến lúc bạn cần một <b style="font-weight:700; color:#fff;">hệ thống thay bạn tuyên bố</b>: "Tôi có thể giúp bạn giải quyết vấn đề, và đây là cách chúng ta bắt đầu."`, 
+            btn: "Khám Phá Hệ Thống 3 Trạm Dẫn Dắt Khách Hàng →"
+          },
+          keeper: {
+            img: "phapsu.webp",
+            name: "Pháp Sư Kín Tiếng",
+            descTop: `<strong style="color:var(--c-bg-dark);">Bạn là một người dẫn đường thấu đáo. Bạn biết rất rõ con đường phải đi, nhưng tấm bản đồ quý giá đó vẫn chỉ đang cất giữ trong đầu bạn.</strong>`,
+            descBottom: `Khách đã có kết nối với bạn nhưng họ chưa được trải nghiệm sự tận tâm và năng lực thực sự của bạn trước khi quyết định. Bạn đang thiếu trạm <strong>Cho & Nhận</strong> để xây dựng niềm tin sâu sắc.`,
+            note: "<strong style=\"display:block; font-size:1.05rem; font-weight:700; color:var(--c-bg-dark); margin-bottom:10px; font-style:normal;\">\"Chuyên Môn Nằm Trong Đầu Là Tài Năng. Chuyên Môn Đặt Vào Tay Khách Hàng Tiềm Năng Là Tài Sản.\"</strong>Bạn có chuyên môn thật sự nhưng người chưa biết bạn không thể thấy điều đó. Một Bộ Quà Tặng đúng vấn đề giúp khách trải nghiệm năng lực của bạn trước khi họ quyết định bỏ tiền. Đó là cách để bạn được chọn vì đã giúp được, không phải vì đã hứa giúp.",
+            btn: "Khám Phá Hệ Thống 3 Trạm Dẫn Dắt Khách Hàng →"
+          },
+          authority: {
+            img: "king.webp",
+            name: "Vị Vua Có Tiếng Nói",
+            descTop: `<strong style="color:var(--c-bg-dark);">Bạn là một người dẫn đường đầy tính định hướng. Khách hàng nhìn thấy tấm bản đồ rõ ràng từ bạn, họ tin tưởng và sẵn sàng an tâm bước đi theo.</strong>`,
+            descBottom: `Khách hàng đã đi qua trọn vẹn cả 3 trạm: <strong>Kết Nối</strong>, <strong>Cho & Nhận</strong>, và <strong>Cùng Đến Đích</strong> kể cả khi bạn không có mặt. Hệ thống đã có, việc còn lại chỉ là làm sắc bén từng mảnh ghép.`,
+            focus: "Mảnh nên làm sắc trước: " + (weak === "hub" ? "Personal Hub" : (weak === "sale" ? "Sale Page" : "Bộ Quà Tặng")),
+            note: "<strong style=\"display:block; font-size:1.05rem; font-weight:700; color:var(--c-bg-dark); margin-bottom:10px; font-style:normal;\">\"Thẩm Quyền Không Đến Từ Số Năm Kinh Nghiệm — Nó Đến Từ Cách Bạn Đóng Gói Chúng.\"</strong>Hệ thống của bạn đang hoạt động rất tốt, người lạ có thể hiểu, tin và bước tiếp mà không cần bạn giải thích. Điều còn lại là làm từng mảnh sắc bén hơn: câu chuyện rõ hơn, con đường mua rõ hơn, bằng chứng thuyết phục hơn. Mỗi lần cải thiện là một lần hệ thống của bạn làm việc hiệu quả hơn, kể cả khi bạn không có mặt.",
+            btn: "Khám Phá Hệ Thống 3 Trạm Dẫn Dắt Khách Hàng →"
+          }
+        };
+
+        const pData = data[persona];
+        
+        const imgCont = document.getElementById('res-img-container');
+        if (pData.img) {
+          imgCont.style.display = 'block';
+          document.getElementById('res-img').src = pData.img;
+        } else {
+          imgCont.style.display = 'none';
+        }
+
+        document.getElementById('res-name').innerText = pData.name;
+        document.getElementById('res-desc-top').innerHTML = pData.descTop;
+        document.getElementById('res-desc-bottom').innerHTML = pData.descBottom;
+        document.getElementById('res-note').innerHTML = pData.note;
+
+        // ── Radar triangle chart ──────────────────────────────────────────
+
+        const getColor = (score, isWeak) => {
+          if (isWeak) return "#E74C3C";
+          if (score <= 2) return "#E74C3C";
+          if (score <= 4) return "#F39C12";
+          return "var(--c-bg-dark)";
+        };
+
+        function drawRadar(hScore, sScore, gScore, weakKey) {
+          const cx = 240, cy = 190, r = 140;
+          // TOP = Chân Dung (hub=0), BR = Chuyển Đổi (sale=1), BL = Năng Lực (gift=2)
+          const angles = [-Math.PI/2, -Math.PI/2 + 2*Math.PI/3, -Math.PI/2 + 4*Math.PI/3];
+          const scores  = [hScore, sScore, gScore];
+          const ids     = ['hub', 'sale', 'gift'];
+
+          // Animate polygon from center outward
+          const targetPts = angles.map((a, i) => {
+            const frac = scores[i] / 6;
+            return [cx + r * frac * Math.cos(a), cy + r * frac * Math.sin(a)];
+          });
+
+          // Start at center, animate to target
+          let start = null;
+          const DURATION = 800;
+          function step(ts) {
+            if (!start) start = ts;
+            const t = Math.min((ts - start) / DURATION, 1);
+            const ease = 1 - Math.pow(1 - t, 3); // ease-out cubic
+            const pts = targetPts.map(([tx, ty]) => [
+              cx + (tx - cx) * ease,
+              cy + (ty - cy) * ease
+            ]);
+            document.getElementById('radar-score').setAttribute('points', pts.map(p => p.join(',')).join(' '));
+            targetPts.forEach(([tx, ty], i) => {
+              const px = cx + (tx - cx) * ease;
+              const py = cy + (ty - cy) * ease;
+              document.getElementById(`radar-dot-${i}`).setAttribute('cx', px);
+              document.getElementById(`radar-dot-${i}`).setAttribute('cy', py);
+              document.getElementById(`radar-lbl-${i}`).setAttribute('x', px);
+              document.getElementById(`radar-lbl-${i}`).setAttribute('y', py + 3.5);
+            });
+            if (t < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+
+          // Update dot colours and legend
+          ids.forEach((id, i) => {
+            const isWeak = (id === weakKey);
+            const col = getColor(scores[i], isWeak);
+            document.getElementById(`radar-dot-${i}`).setAttribute('fill', col);
+            document.getElementById(`radar-lbl-${i}`).textContent = scores[i];
+
+          });
+
+          // Highlight the weak vertex with a pulsing ring
+          const weakIdx = ids.indexOf(weakKey);
+          if (weakIdx >= 0) {
+            const dot = document.getElementById(`radar-dot-${weakIdx}`);
+            dot.setAttribute('r', '18');
+          }
+        }
+
+        drawRadar(hubScore, saleScore, giftScore, weak);
+
+        const SALE_PAGE_URL = "../LPcourse/index.html";
+        const btnUrl = `${SALE_PAGE_URL}?score=${totalScore}&hub=${hubScore}&sale=${saleScore}&gift=${giftScore}&weak=${weak}&persona=${persona}`;
+        document.getElementById('res-btn').innerText = pData.btn;
+        document.getElementById('res-btn').href = btnUrl;
+      }
+    });
+  </script>
+
+
+
+
+
+
+<script>
+function initTimeline() {
+  const wrap = document.querySelector('.vt-wrap');
+  if (!wrap) return;
+  
+  const trackThick = document.getElementById('vt-track-base-thick');
+  const trackThin = document.getElementById('vt-track-base-thin');
+  const litThick = document.getElementById('vt-track-lit-thick');
+  const litThin = document.getElementById('vt-track-lit-thin');
+  const car = document.getElementById('vt-car');
+  const dots = Array.from(wrap.querySelectorAll('.vt-center'));
+  
+  if (!trackThick || !car || dots.length < 2) return;
+  
+  let dotYs = [];
+  
+  function drawTrack() {
+    const wrapRect = wrap.getBoundingClientRect();
+    const cx = 80;
+    const W = window.innerWidth <= 768 ? 0 : 65;
+    
+    dotYs = dots.map(dot => {
+      const r = dot.getBoundingClientRect();
+      return r.top - wrapRect.top + r.height / 2;
+    });
+    
+    let d = `M ${cx} ${dotYs[0]} `;
+    
+    for(let i=0; i<dotYs.length-1; i++) {
+       const y1 = dotYs[i];
+       const y2 = dotYs[i+1];
+       const dir = (i % 2 === 0) ? 1 : -1;
+       const cpY = Math.min(60, (y2 - y1) / 2.5);
+       d += `C ${cx + dir*W} ${y1 + cpY}, ${cx + dir*W} ${y2 - cpY}, ${cx} ${y2} `;
+    }
+    
+    trackThick.setAttribute('d', d);
+    trackThin.setAttribute('d', d);
+    if(litThick) litThick.setAttribute('d', d);
+    if(litThin) litThin.setAttribute('d', d);
+  }
+  
+  drawTrack();
+  window.addEventListener('resize', drawTrack);
+  
+  window.addEventListener('scroll', () => {
+    const totalLen = trackThick.getTotalLength();
+    if (totalLen === 0) return;
+    
+    const startDot = dots[0];
+    const endDot = dots[dots.length-1];
+    
+    const pageStart = window.scrollY + startDot.getBoundingClientRect().top + startDot.offsetHeight/2;
+    const pageEnd = window.scrollY + endDot.getBoundingClientRect().top + endDot.offsetHeight/2;
+    
+    const viewportMid = window.scrollY + window.innerHeight / 2;
+    
+    let progress = (viewportMid - pageStart) / (pageEnd - pageStart);
+    progress = Math.max(0, Math.min(1, progress));
+    
+    const currLen = progress * totalLen;
+    const pt = trackThick.getPointAtLength(currLen);
+    
+    const ptAhead = trackThick.getPointAtLength(Math.min(currLen + 5, totalLen));
+    let angle = Math.atan2(ptAhead.y - pt.y, ptAhead.x - pt.x) * 180 / Math.PI;
+    
+    car.style.transform = `translate(${pt.x - 80}px, ${pt.y}px) rotate(${angle}deg)`;
+    
+    if(litThick) {
+        litThick.style.strokeDasharray = totalLen;
+        litThick.style.strokeDashoffset = totalLen - currLen;
+    }
+    if(litThin) {
+        litThin.style.strokeDasharray = totalLen;
+        litThin.style.strokeDashoffset = totalLen - currLen;
+    }
+    
+    dots.forEach((dot, i) => {
+       if (pt.y + 10 >= dotYs[i]) {
+          dot.classList.add('vt-active');
+       } else {
+          dot.classList.remove('vt-active');
+       }
+    });
+  });
+  
+  window.dispatchEvent(new Event('scroll'));
+}
+window.addEventListener('load', initTimeline);
+document.addEventListener('DOMContentLoaded', initTimeline);
+setTimeout(initTimeline, 500);
+</script>
+
+
+  <script>
+    function closeBar() {
+      document.getElementById('abs-bar').style.display = 'none';
+    }
+  </script>
+
+<footer style="background-color: var(--c-bg-dark); color: rgba(255,255,255,0.7); padding: 60px 24px 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div style="font-weight: 700; color: var(--c-lime); font-size: 1.4rem; margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase;">Social To Sale Focus Camp</div>
+    <p style="font-size: 1rem; margin-bottom: 20px; line-height: 1.6;">Hệ thống chuyển đổi từ khán giả thành khách trả phí<br>dành riêng cho Solo-Expert và Trung tâm đào tạo.</p>
+    
+    <div style="font-size: 0.9rem; margin-bottom: 32px; line-height: 1.8; color: rgba(255,255,255,0.6);">
+      <p style="margin: 0;"><strong>Địa chỉ:</strong> 29 đường R, Lakeview City, P. Bình Trưng, Quận 2, TP. HCM</p>
+      <p style="margin: 0;"><strong>Email liên hệ:</strong> thieny.hong@gmail.com</p>
+    </div>
+
+    <div style="font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px;">
+      &copy; 2026 Focus Camp. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

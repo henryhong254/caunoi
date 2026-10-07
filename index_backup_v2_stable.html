@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bản Đồ Cho Solo-Expert: Làm Chủ Phễu Chuyển Đổi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- Floating reading progress bar -->
+  <div id="progress"></div>
+
+  <!-- Sticky Bottom Bar -->
+  <div id="abs-bar" class="hidden">
+    <div class="abs-content">
+      <div class="abs-text">
+        <div class="abs-tag">Workshop Thực Hành</div>
+        <div>Sớm muộn cũng phải có Cánh Cửa — <span>tại sao không tự xây bằng AI ngay hôm nay?</span></div>
+      </div>
+      <div class="abs-actions">
+        <a href="#final-cta" class="btn-primary-small">Tìm Hiểu Workshop →</a>
+        <button onclick="closeBar()" class="btn-close">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero text-center" style="padding: 60px 0 40px; min-height: calc(100vh - 100px); display: flex; flex-direction: column; justify-content: center;">
+    <div class="container hero-container" style="text-align: center;">
+      <div class="hero-eyebrow" style="margin-bottom: 16px; font-size: 1.1rem; letter-spacing: 0.1em;">Bản đồ chiến lược 2026</div>
+      <h1 class="hero-title" style="font-size: 3.8rem; margin-bottom: 24px; line-height: 1.15;">Bạn Giỏi Nghề.<br>Nhưng Không Ai Hiểu<br><span class="text-lime" style="display: block; font-size: 0.95em; margin-top: 10px; font-weight: 700; text-transform: uppercase; min-height: 1.3em;"><span id="typewriter">BẠN ĐANG BÁN GÌ?</span><span class="cursor">|</span></span></h1>
+      <p class="hero-subtitle mx-auto" style="font-size: 1.35rem; margin-bottom: 32px; max-width: 800px; line-height: 1.6;">Từ kỷ nguyên "Đăng Social Chờ Khách" sang "Sở Hữu Phễu Chuyển Đổi" — và vì sao việc bạn chỉ tập trung xây kênh đang làm lãng phí 80% khách hàng tiềm năng.</p>
+    </div>
+  </header>
+
+  <div class="divider-fancy"></div>
+
+<section class="section bg-cream text-center">
+    <div class="container">
+      <div class="section-label mx-auto" style="color: var(--c-bg-dark);">THỰC TRẠNG HIỆN TẠI</div>
+      <h2 class="section-title" style="color: var(--c-bg-dark);">Bạn Đang Ở Nhóm Nào Trong 3 Nhóm Solo-Expert Hiện Nay?</h2>
+      <p class="section-desc mx-auto center-desc" style="color: var(--c-bg-light);">Bạn giỏi. Khách hàng vẫn không tìm đến. Bạn thuộc nhóm nào dưới đây?</p>
+      
+      <!-- STAGGERED LIST BENTO -->
+      <div class="staggered-list mt-12 text-left">
+        <!-- Nhóm A -->
+        <div class="staggered-row">
+          <div class="st-img">
+            <img src="contot.png" alt="Nhóm A">
+          </div>
+          <div class="st-content">
+            <div class="tag-solid">Nhóm A · Phổ biến nhất</div>
+            <h3>Chuyên gia ẩn dật</h3>
+            <div class="status-item">
+              <span class="status-label">Thực trạng:</span> Giỏi nghề, nhưng không biết cách đóng gói. Khách hàng hỏi "Bạn làm gì?", bạn mất 5 phút giải thích vẫn không rõ ràng.
+            </div>
+            <div class="status-item mt-4">
+              <span class="status-label text-red">Nỗi đau:</span> Sợ bán hàng, bị đối thủ kém chuyên môn hơn nẫng tay trên chỉ vì họ có bao bì đẹp hơn.
+            </div>
+          </div>
+        </div>
+
+        <!-- Nhóm B -->
+        <div class="staggered-row reverse">
+          <div class="st-img">
+            <img src="tot2.jpg" alt="Nhóm B">
+          </div>
+          <div class="st-content">
+            <div class="tag-solid">Nhóm B · Dễ kiệt sức</div>
+            <h3>Ngôi sao Content</h3>
+            <div class="status-item">
+              <span class="status-label">Thực trạng:</span> Sản xuất content liên tục, nhiều Like, nhiều Share. Nhưng khách chỉ vào khen hay rồi đi mất, không mua hàng.
+            </div>
+            <div class="status-item mt-4">
+              <span class="status-label text-red">Nỗi đau:</span> Trở thành "nô lệ" của thuật toán. Ngừng đăng bài là ngừng có khách. Có Traffic nhưng không có Lead.
+            </div>
+          </div>
+        </div>
+
+        <!-- Nhóm C -->
+        <div class="staggered-row">
+          <div class="st-img">
+            <img src="chess.jpg" alt="Nhóm C">
+          </div>
+          <div class="st-content bg-teal-light">
+            <div class="tag-solid bg-teal text-white">Nhóm C · Tinh hoa</div>
+            <h3>Người xây hệ thống</h3>
+            <div class="status-item">
+              <span class="status-label">Thực trạng:</span> Họ không cần viral. Mỗi bài đăng của họ đều điều hướng khách hàng về một Landing Page thu phễu.
+            </div>
+            <div class="status-item mt-4">
+              <span class="status-label text-lime-dark">Kết quả:</span> Dữ liệu khách hàng tự động chảy về hệ thống ngay cả khi họ đang ngủ. Chủ động chốt sale bất kỳ lúc nào.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SECTION 2: TRAFFIC METAPHOR -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="section-label mx-auto">SỰ THẬT PHŨ PHÀNG</div>
+      <h2 class="section-title">Kênh Social Không Phải Là Tài Sản.</h2>
+      
+      <div class="art-grid text-left">
+        <div class="art-block">
+          <div class="art-img-wrap"><img src="road.jpg" class="art-img" alt="Con đường"></div>
+          <div class="art-text">Kênh Social là con đường tấp nập khách hàng tiềm năng, nhưng...</div>
+        </div>
+        <div class="art-block art-block-reverse">
+          <div class="art-img-wrap"><img src="door.jpg" class="art-img" alt="Cánh cửa"></div>
+          <div class="art-text text-right">Nếu bạn thiếu <strong>những cánh cửa</strong> để chào đón họ thì họ chỉ mãi là người qua đường, không bao giờ thuộc về bạn.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL WIDTH PARALLAX SECTION -->
+  <section class="parallax-solution">
+    <div class="parallax-overlay">
+      <div class="container">
+        <div class="glass-quote-card">
+          <div class="callout-label text-lime">Giải Pháp Cốt Lõi</div>
+          <p class="callout-text">"Kỹ năng quan trọng nhất không phải là cố vắt kiệt sức để bài viết được Viral — mà là biết cách dựng lên những <strong>Landing Page</strong> để mời họ bước vào thế giới của riêng bạn."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TƯ DUY ĐẤT MƯỢN -->
+  
+
+  <!-- SECTION 4: BẢN ĐỒ -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="section-label mx-auto">GIẢI PHÁP TOÀN DIỆN</div>
+      <h2 class="section-title">🗺️ Bản Đồ Hành Trình Của Khách Hàng</h2>
+      <p class="section-desc mx-auto center-desc">Đây là hành trình chuẩn mực để biến một người lạ trên mạng xã hội thành khách hàng trung thành.</p>
+      
+      <div class="journey-map mt-12 text-left" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div class="j-step">
+          <div class="j-num">1</div>
+          <div class="j-content">
+            <h4>Con Đường (Social Media)</h4>
+            <p>Nơi bạn chia sẻ giá trị miễn phí. FB Cá nhân, TikTok, YouTube. Ai cũng có thể đến — nhưng bạn không sở hữu ai ở đây.</p>
+          </div>
+        </div>
+        
+        <div class="j-step j-highlight">
+          <div class="j-num">2</div>
+          <div class="j-content">
+            <h4>Landing Page</h4>
+            <p>Cánh Cửa sàng lọc người thực sự quan tâm và thu thập thông tin liên lạc. Đây là nơi Landing Page làm việc — <strong>biến người lạ thành lead.</strong></p>
+          </div>
+        </div>
+        
+        <div class="j-step">
+          <div class="j-num">3</div>
+          <div class="j-content">
+            <h4>Phòng Khách (Email List / Zalo Group)</h4>
+            <p>Nơi bạn toàn quyền chủ động. Những người ở đây đã qua màng lọc, có sự tin tưởng nhất định — tỷ lệ mua hàng cao hơn gấp nhiều lần.</p>
+          </div>
+        </div>
+        
+        <div style="background: rgba(200, 222, 49, 0.08); border-left: 4px solid var(--c-lime); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 40px; margin-left: 20px;">
+          <strong style="color: var(--c-lime); display: block; margin-bottom: 8px; font-size: 1rem;">💡 LƯU Ý QUAN TRỌNG:</strong>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">Không nên xây Website ở giai đoạn đầu, mà hãy tập trung hoàn toàn vào <strong>Landing Page</strong>. Vì Website chứa quá nhiều thông tin khiến khách hàng bị phân tâm, trong khi Landing Page là một luồng đi duy nhất hướng tới việc chốt Sale hoặc lấy Data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 6 LOẠI CÁNH CỬA -->
+  <section class="section bg-light" style="background: var(--c-cream); color: var(--c-bg-dark);">
+    <div class="container text-center">
+      <div class="section-label mx-auto" style="color: var(--c-bg-dark);">BỨC TRANH TOÀN CẢNH</div>
+      <h2 class="section-title" style="color: var(--c-bg-dark);">Hệ Thống 6 Cánh Cửa Của Một Solo-Expert Thực Thụ</h2>
+      <p class="section-desc mx-auto center-desc" style="color: var(--c-bg-light);">Landing Page không chỉ để bán hàng. Một phễu chuyển đổi chuẩn mực cần sự phối hợp của 6 loại Cánh Cửa khác nhau.</p>
+      
+      <div class="mt-12 mx-auto" style="max-width: 1000px; overflow: hidden;">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper text-left">
+            
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-1">
+                <div class="lp-tag">Xây dựng thương hiệu</div>
+                <h3 class="lp-title">Personal Hub</h3>
+                <p class="lp-subtitle">Digital HQ / Brand Anchor</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Định vị chuyên gia, xây dựng lòng tin dài hạn và làm cổng phân luồng traffic
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Đăng ký nhận Newsletter / Xem giải pháp chuyên sâu
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-2">
+                <div class="lp-tag">Thu thập thông tin</div>
+                <h3 class="lp-title">Lead Magnet Page</h3>
+                <p class="lp-subtitle">Squeeze Page / Opt-in</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Thu thập thông tin liên hệ (Email/Tên) để nuôi dưỡng tệp tiềm năng
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Tải tài liệu, template, checklist, mini-guide miễn phí
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-3">
+                <div class="lp-tag">Chốt sale dịch vụ</div>
+                <h3 class="lp-title">Application Page</h3>
+                <p class="lp-subtitle">Discovery Call Page</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Sàng lọc mức độ phù hợp và chốt các hợp đồng tư vấn/coaching giá trị cao
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Điền form khảo sát năng lực &rarr; Đặt lịch gọi tư vấn 1:1
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-4">
+                <div class="lp-tag">Bán sản phẩm trực tuyến</div>
+                <h3 class="lp-title">Direct Sales Page</h3>
+                <p class="lp-subtitle">Long-form Sales Page</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Tự động hóa bán các sản phẩm số, khóa học tự học hoặc gói dịch vụ trọn gói
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Bấm mua và thanh toán ngay (Buy Now / Checkout)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-5">
+                <div class="lp-tag">Đăng ký sự kiện</div>
+                <h3 class="lp-title">Event / Waitlist Page</h3>
+                <p class="lp-subtitle">Tạo hiệu ứng khan hiếm</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Tạo hiệu ứng khan hiếm, kiểm tra nhu cầu thị trường trước khi mở bán chính thức
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Đăng ký vé sự kiện, ghi tên vào danh sách chờ nhận ưu đãi sớm
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+              <div class="lp-card color-6">
+                <div class="lp-tag">Tối ưu đa liên kết</div>
+                <h3 class="lp-title">Super Bio</h3>
+                <p class="lp-subtitle">Link-in-bio mở rộng</p>
+                
+                <div class="lp-details">
+                  <div class="lp-detail-item mb-4">
+                    <span class="lp-detail-label">Vai trò:</span> Điều hướng nhanh người theo dõi từ mạng xã hội đến các điểm chạm quan trọng nhất
+                  </div>
+                  <div class="lp-detail-item">
+                    <span class="lp-detail-label">Hành động:</span> Nhấp vào các liên kết ưu tiên (bài viết mới, quà tặng, booking)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      
+      <!-- Khối Lead Magnet Premium -->
+      <div class="container text-center" style="margin-top: 100px; padding-bottom: 60px;">
+        
+        <h2 class="section-title" style="color: var(--c-bg-dark);">Làm thế nào để 6 Cánh Cửa này liên kết thành một Phễu hoàn chỉnh?</h2>
+        
+        <p class="section-desc mx-auto center-desc" style="color: var(--c-bg-dark); margin-bottom: 3rem; font-size: 1.1rem;">
+          Đừng để khách hàng rơi rụng vì một hành trình rời rạc. Đã đến lúc trang bị cho doanh nghiệp Solo của bạn một cỗ máy chuyển đổi tự động và chuẩn mực.
+        </p>
+        
+        <div class="mt-4">
+          <a href="#" style="display: inline-block; padding: 18px 45px; border-radius: 50px; font-weight: 700; background: var(--c-bg-dark); color: #fff; text-decoration: none; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 10px 30px rgba(2, 56, 48, 0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(2, 56, 48, 0.3); this.style.background='#000'';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 30px rgba(2, 56, 48, 0.2)'; this.style.background='var(--c-bg-dark)';">Khám Phá Hệ Thống 6 Cánh Cửa Chuyển Đổi &rarr;</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  
+
+  <!-- FINAL CTA -->
+  <section class="final-section" style="background: var(--c-bg);" id="final-cta">
+    <div class="container">
+      <div class="final-box">
+        <div class="section-label" style="color: #ffffff;">BƯỚC TIẾP THEO CỦA BẠN</div>
+        <h2 style="color: #ffffff;">Workshop: Landing Page 3 Không</h2>
+        <p class="final-subtitle" style="color: var(--c-lime);">Sở hữu "Cánh Cửa" đầu tiên để đón khách hàng mà Không cần thiết kế, Không cần lập trình, và Không tốn phí công cụ.</p>
+        
+        <div class="benefits-grid text-left">
+          <div class="b-item">
+            <div class="b-icon">🤖</div>
+            <div>
+              <strong style="color: var(--c-bg-dark); display: block; margin-bottom: 4px;">AI Agent Code & Design</strong>
+              <span style="font-size: 0.85rem; color: rgba(4, 88, 76, 0.7);">Bạn chỉ cần nạp nội dung. AI tự động cấu trúc và thiết kế.</span>
+            </div>
+          </div>
+          <div class="b-item">
+            <div class="b-icon">🎯</div>
+            <div>
+              <strong style="color: var(--c-bg-dark); display: block; margin-bottom: 4px;">Chọn Đúng Loại Phễu</strong>
+              <span style="font-size: 0.85rem; color: rgba(4, 88, 76, 0.7);">Áp dụng 4 loại LP đúng vào mô hình kinh doanh.</span>
+            </div>
+          </div>
+          <div class="b-item">
+            <div class="b-icon">📝</div>
+            <div>
+              <strong style="color: var(--c-bg-dark); display: block; margin-bottom: 4px;">Copywriting Framework</strong>
+              <span style="font-size: 0.85rem; color: rgba(4, 88, 76, 0.7);">Có sẵn bộ khung content, không phải nặn từng chữ.</span>
+            </div>
+          </div>
+          <div class="b-item">
+            <div class="b-icon">⚡</div>
+            <div>
+              <strong style="color: var(--c-bg-dark); display: block; margin-bottom: 4px;">Xong Ngay Trong Buổi</strong>
+              <span style="font-size: 0.85rem; color: rgba(4, 88, 76, 0.7);">Thực hành trực tiếp, có ngay trang xịn để chạy Ads.</span>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#" class="btn-primary-large">Đăng Ký Khóa Học Ngay Hôm Nay →</a>
+        <p class="mt-4" style="font-size: 0.8rem; color: var(--c-lime);">* Bạn sẽ được chuyển hướng sang trang đăng ký chính thức.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        initialSlide: 1,
+      });
+    });
+  </script>
+</body>
+</html>
+
