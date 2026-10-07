@@ -161,7 +161,13 @@ h1, h2, h3, h4 { font-family: "Playfair Display", serif; font-weight: 600; line-
     .hero-title { font-size: 2.4rem; }
     .section-title { font-size: 2rem; }
     .final-box h2 { font-size: 2.2rem; }
-    .abs-content { flex-direction: column; text-align: center; gap: 12px; }
+    
+      .abs-content { flex-direction: row; text-align: left; gap: 10px; padding: 0 10px; justify-content: space-between; }
+      #abs-bar { padding: 12px 0; }
+      .abs-tag { display: none; }
+      .abs-text { font-size: 0.8rem; line-height: 1.3; }
+      #abs-bar .btn-primary-small { padding: 8px 12px; font-size: 0.8rem; white-space: nowrap; flex-shrink: 0; }
+
 }
 /* ART GRID */
 .art-grid { display: flex; flex-direction: column; gap: 60px; margin-top: 40px; margin-bottom: 40px; }
