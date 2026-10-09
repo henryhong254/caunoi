@@ -65,6 +65,14 @@ function typeEffect() {
   
   setTimeout(typeEffect, typeSpeed);
 }
-if(typewriterElement) {
+if(typewriterElement && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     setTimeout(typeEffect, 1200);
+}
+
+// Reserve the actual bar height, including mobile safe-area padding.
+const ctaBar = document.getElementById('abs-bar');
+if (ctaBar) {
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--sticky-cta-height', `${ctaBar.getBoundingClientRect().height}px`);
+  }).observe(ctaBar);
 }

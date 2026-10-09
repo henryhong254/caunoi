@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Bản Đồ Cho Solo-Expert: Làm Chủ Phễu Chuyển Đổi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
       </div>
       <div class="abs-actions">
         <a href="#quiz" class="btn-primary-small btn-super-glow">Khám Phá Focus Camp →</a>
-        <button onclick="closeBar()" class="btn-close">✕</button>
+        <button onclick="closeBar()" class="btn-close" aria-label="Đóng thanh giới thiệu">✕</button>
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@
     <div class="vt-wrap">
       
       <!-- ABSOLUTE START -->
-      <div class="vt-center vt-start-dot" style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 10; font-size: 0.55rem; width: 52px; height: 52px; border-radius: 50%;">START</div>
+      <div class="vt-center vt-start-dot" style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 10; font-size: 1.2rem; width: 80px; height: 80px;">START</div>
 
       <!-- INLINE SVG TRACK -->
       <svg class="vt-svg-track" width="160" height="100%" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; pointer-events: none;">
@@ -105,7 +105,7 @@
           <p class="vt-desc">Kết nối ở đây <strong>không phải là một nút bấm "Follow" vô hồn</strong>. Đây là nơi khách hàng <strong>cởi bỏ sự đề phòng, bước vào thế giới quan của bạn</strong> và thực sự hiểu rõ bạn là ai trước khi bất kỳ giao dịch nào diễn ra.</p>
           <div class="vt-equip-badge">Trang Bị: Personal Hub</div>
         </div>
-        <div class="vt-center" style="font-size: 0.55rem; width: 52px; height: 52px; border-radius: 50%; line-height: 1.2; padding: 4px;">Trạm<br>I</div>
+        <div class="vt-center">Trạm<br>I</div>
         <div class="vt-col vt-right col-img">
           <div class="vt-img-card">
             <img src="connect_clean.jpg" alt="Trạm 1">
@@ -120,7 +120,7 @@
             <img src="gi1.jpg" alt="Trạm 2">
           </div>
         </div>
-        <div class="vt-center" style="font-size: 0.55rem; width: 52px; height: 52px; border-radius: 50%; line-height: 1.2; padding: 4px;">Trạm<br>II</div>
+        <div class="vt-center">Trạm<br>II</div>
         <div class="vt-col vt-right vt-text">
           <h3 class="vt-title">Cho &amp; Nhận</h3>
           <p class="vt-desc"><strong>Niềm tin không sinh ra từ lời hứa, mà từ trải nghiệm thật</strong>. Việc trao đi một giá trị nhỏ giúp giải quyết đúng một mảnh ghép nỗi đau sẽ <strong>xóa bỏ hoàn toàn rào cản hoài nghi</strong>. Họ nhận được kết quả, còn bạn nhận được <strong>sự tín nhiệm tuyệt đối</strong>.</p>
@@ -135,7 +135,7 @@
           <p class="vt-desc">Lúc này, khách hàng đã có kết nối, đã tin tưởng vào năng lực của bạn nhưng họ cần <strong>hiểu rõ về sản phẩm của bạn, về giải pháp bạn đưa ra</strong> cho họ để sẵn sàng đồng hành cùng bạn. Nếu bạn không có một <strong>lời chào hàng mạnh mẽ</strong>, khách hàng sẽ <strong>mua từ đối thủ dù rất yêu thích bạn</strong>.</p>
           <div class="vt-equip-badge">Trang Bị: Sale Page</div>
         </div>
-        <div class="vt-center" style="font-size: 0.55rem; width: 52px; height: 52px; border-radius: 50%; line-height: 1.2; padding: 4px;">Trạm<br>III</div>
+        <div class="vt-center">Trạm<br>III</div>
         <div class="vt-col vt-right col-img">
           <div class="vt-img-card">
             <img src="give2.jpg" alt="Trạm 3">
@@ -216,81 +216,81 @@
             <div class="quiz-step" data-step="1">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">1. Một người lạ thấy bài đăng của bạn và muốn biết bạn là ai, làm nghề bao lâu, từng giúp ai. Họ tìm ở đâu?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Chỉ có thể lướt lại các bài đăng cũ</div>
-                <div class="quiz-opt" data-val="1">Phần giới thiệu ngắn trên trang mạng xã hội</div>
-                <div class="quiz-opt" data-val="2">Một trang riêng tổng hợp hành trình, thành tựu và câu chuyện của tôi</div>
+                <button type="button" class="quiz-opt" data-val="0">Chỉ có thể lướt lại các bài đăng cũ</button>
+                <button type="button" class="quiz-opt" data-val="1">Phần giới thiệu ngắn trên trang mạng xã hội</button>
+                <button type="button" class="quiz-opt" data-val="2">Một trang riêng tổng hợp hành trình, thành tựu và câu chuyện của tôi</button>
               </div>
             </div>
             <!-- Q2 -->
             <div class="quiz-step" data-step="2" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">2. Khi có người hỏi "Bạn làm gì vậy?", bạn mất bao lâu để họ hiểu?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Vài phút, và thường phải giải thích lại nhiều lần</div>
-                <div class="quiz-opt" data-val="1">Giải thích được, nhưng mỗi lần nói một kiểu</div>
-                <div class="quiz-opt" data-val="2">Một câu là họ hiểu, hoặc tôi gửi một đường dẫn là đủ</div>
+                <button type="button" class="quiz-opt" data-val="0">Vài phút, và thường phải giải thích lại nhiều lần</button>
+                <button type="button" class="quiz-opt" data-val="1">Giải thích được, nhưng mỗi lần nói một kiểu</button>
+                <button type="button" class="quiz-opt" data-val="2">Một câu là họ hiểu, hoặc tôi gửi một đường dẫn là đủ</button>
               </div>
             </div>
             <!-- Q3 -->
             <div class="quiz-step" data-step="3" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">3. Khi người mới muốn biết bạn đã giúp được ai, họ xem gì?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Chờ họ hỏi rồi tôi mới nhắn vài hình ảnh, tin nhắn cảm ơn</div>
-                <div class="quiz-opt" data-val="1">Có vài bài đăng phản hồi của khách rải rác trên kênh</div>
-                <div class="quiz-opt" data-val="2">Có một nơi tổng hợp kết quả, lời khách và thành tựu để họ tự xem</div>
+                <button type="button" class="quiz-opt" data-val="0">Chờ họ hỏi rồi tôi mới nhắn vài hình ảnh, tin nhắn cảm ơn</button>
+                <button type="button" class="quiz-opt" data-val="1">Có vài bài đăng phản hồi của khách rải rác trên kênh</button>
+                <button type="button" class="quiz-opt" data-val="2">Có một nơi tổng hợp kết quả, lời khách và thành tựu để họ tự xem</button>
               </div>
             </div>
             <!-- Q4 -->
             <div class="quiz-step" data-step="4" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">4. Khi khách muốn tìm hiểu sản phẩm của bạn, họ làm gì?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Inbox hỏi tôi, và tôi chưa có gì sẵn để gửi</div>
-                <div class="quiz-opt" data-val="1">Tôi tư vấn từng người, mỗi lần giải thích lại từ đầu</div>
-                <div class="quiz-opt" data-val="2">Họ có một trang hoặc tài liệu để tự đọc trước, rồi mới đặt lịch hoặc mua khi đã hiểu</div>
+                <button type="button" class="quiz-opt" data-val="0">Inbox hỏi tôi, và tôi chưa có gì sẵn để gửi</button>
+                <button type="button" class="quiz-opt" data-val="1">Tôi tư vấn từng người, mỗi lần giải thích lại từ đầu</button>
+                <button type="button" class="quiz-opt" data-val="2">Họ có một trang hoặc tài liệu để tự đọc trước, rồi mới đặt lịch hoặc mua khi đã hiểu</button>
               </div>
             </div>
             <!-- Q5 -->
             <div class="quiz-step" data-step="5" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">5. Khách muốn mua nhưng ngại hỏi giá hoặc ngại nhắn tin. Họ tìm hiểu bằng cách nào?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Không có cách nào khác, họ phải hỏi trực tiếp tôi</div>
-                <div class="quiz-opt" data-val="1">Họ phải qua buổi tư vấn mới biết mức đầu tư</div>
-                <div class="quiz-opt" data-val="2">Trang của tôi có bảng giá, hoặc nói rõ khoảng đầu tư, ai phù hợp và quy trình, để họ tự biết có nên đặt lịch không</div>
+                <button type="button" class="quiz-opt" data-val="0">Không có cách nào khác, họ phải hỏi trực tiếp tôi</button>
+                <button type="button" class="quiz-opt" data-val="1">Họ phải qua buổi tư vấn mới biết mức đầu tư</button>
+                <button type="button" class="quiz-opt" data-val="2">Trang của tôi có bảng giá, hoặc nói rõ khoảng đầu tư, ai phù hợp và quy trình, để họ tự biết có nên đặt lịch không</button>
               </div>
             </div>
             <!-- Q6 -->
             <div class="quiz-step" data-step="6" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">6. Khách quan tâm vào lúc bạn đang bận hoặc đã ngủ. Họ làm được gì?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Chờ tôi trả lời hôm sau</div>
-                <div class="quiz-opt" data-val="1">Để lại tin nhắn hoặc thông tin, tôi liên hệ sau</div>
-                <div class="quiz-opt" data-val="2">Tự xem đủ thông tin và đặt lịch hoặc mua ngay, tuỳ loại sản phẩm</div>
+                <button type="button" class="quiz-opt" data-val="0">Chờ tôi trả lời hôm sau</button>
+                <button type="button" class="quiz-opt" data-val="1">Để lại tin nhắn hoặc thông tin, tôi liên hệ sau</button>
+                <button type="button" class="quiz-opt" data-val="2">Tự xem đủ thông tin và đặt lịch hoặc mua ngay, tuỳ loại sản phẩm</button>
               </div>
             </div>
             <!-- Q7 -->
             <div class="quiz-step" data-step="7" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">7. Người xem thích nội dung của bạn nhưng chưa sẵn sàng mua. Họ có thể nhận gì từ bạn để thấy bạn thật sự giỏi?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Chỉ có các bài đăng hằng ngày</div>
-                <div class="quiz-opt" data-val="1">Có tài liệu hoặc bài viết hay nhưng rải rác, khó tìm</div>
-                <div class="quiz-opt" data-val="2">Có ít nhất một món quà cụ thể (checklist, công cụ, template, hướng dẫn...) mà ai cũng lấy được</div>
+                <button type="button" class="quiz-opt" data-val="0">Chỉ có các bài đăng hằng ngày</button>
+                <button type="button" class="quiz-opt" data-val="1">Có tài liệu hoặc bài viết hay nhưng rải rác, khó tìm</button>
+                <button type="button" class="quiz-opt" data-val="2">Có ít nhất một món quà cụ thể (checklist, công cụ, template, hướng dẫn...) mà ai cũng lấy được</button>
               </div>
             </div>
             <!-- Q8 -->
             <div class="quiz-step" data-step="8" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">8. Món quà miễn phí của bạn (nếu có) được thiết kế từ đâu?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Tôi chưa có quà tặng nào</div>
-                <div class="quiz-opt" data-val="1">Từ thứ tôi thấy hay hoặc dễ làm</div>
-                <div class="quiz-opt" data-val="2">Từ một vấn đề cụ thể mà khách đang gặp</div>
+                <button type="button" class="quiz-opt" data-val="0">Tôi chưa có quà tặng nào</button>
+                <button type="button" class="quiz-opt" data-val="1">Từ thứ tôi thấy hay hoặc dễ làm</button>
+                <button type="button" class="quiz-opt" data-val="2">Từ một vấn đề cụ thể mà khách đang gặp</button>
               </div>
             </div>
             <!-- Q9 -->
             <div class="quiz-step" data-step="9" style="display: none;">
               <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--c-bg-dark); line-height: 1.5;">9. Sau khi ai đó dùng món quà của bạn, điều gì xảy ra?</h3>
               <div class="quiz-options">
-                <div class="quiz-opt" data-val="0">Tôi không có cách nào biết họ có dùng hay không</div>
-                <div class="quiz-opt" data-val="1">Thỉnh thoảng có người nhắn khen hoặc hỏi thêm, nhưng ngẫu nhiên</div>
-                <div class="quiz-opt" data-val="2">Quà dẫn họ tới bước tiếp theo rõ ràng (xem trang giới thiệu, đặt lịch, hỏi thêm) và tôi thấy có người nói "nhờ món này mà biết đến bạn"</div>
+                <button type="button" class="quiz-opt" data-val="0">Tôi không có cách nào biết họ có dùng hay không</button>
+                <button type="button" class="quiz-opt" data-val="1">Thỉnh thoảng có người nhắn khen hoặc hỏi thêm, nhưng ngẫu nhiên</button>
+                <button type="button" class="quiz-opt" data-val="2">Quà dẫn họ tới bước tiếp theo rõ ràng (xem trang giới thiệu, đặt lịch, hỏi thêm) và tôi thấy có người nói "nhờ món này mà biết đến bạn"</button>
               </div>
             </div>
           </div>
@@ -324,7 +324,7 @@
 
           <!-- Radar Triangle Chart -->
           <div style="max-width: 560px; margin: 0 auto 10px auto; text-align: center;">
-            <svg id="radar-chart" viewBox="0 -35 480 345" style="width: 100%; height: auto; overflow: visible;">
+            <svg id="radar-chart" viewBox="-40 -35 600 355" style="width: 100%; height: auto; overflow: visible;">
               <!-- cx=240, cy=190, r=140 -->
               <!-- Axis lines from center -->
               <line x1="240" y1="190" x2="240" y2="50"  stroke="rgba(0,0,0,0.07)" stroke-width="1.5"/>
@@ -996,6 +996,7 @@
     }
 
   </style>
+  <link rel="stylesheet" href="mobile.css">
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -1072,8 +1073,12 @@
         });
       }
 
+      let advancing = false;
       opts.forEach(opt => {
         opt.addEventListener('click', function() {
+          if (advancing) return;
+          advancing = true;
+          btnPrev.disabled = true;
           const parent = this.closest('.quiz-options');
           parent.querySelectorAll('.quiz-opt').forEach(o => o.classList.remove('selected'));
           this.classList.add('selected');
@@ -1082,6 +1087,8 @@
           answers[currentStep - 1] = val;
 
           setTimeout(() => {
+            advancing = false;
+            btnPrev.disabled = false;
             if (currentStep < totalSteps) {
               currentStep++;
               updateUI();
@@ -1281,7 +1288,8 @@
 <script>
 function initTimeline() {
   const wrap = document.querySelector('.vt-wrap');
-  if (!wrap) return;
+  if (!wrap || wrap.dataset.initialized) return;
+  wrap.dataset.initialized = 'true';
   
   const trackThick = document.getElementById('vt-track-base-thick');
   const trackThin = document.getElementById('vt-track-base-thin');
@@ -1322,6 +1330,7 @@ function initTimeline() {
   
   drawTrack();
   window.addEventListener('resize', drawTrack);
+  new ResizeObserver(drawTrack).observe(wrap);
   
   window.addEventListener('scroll', () => {
     const totalLen = trackThick.getTotalLength();
@@ -1374,7 +1383,9 @@ setTimeout(initTimeline, 500);
 
   <script>
     function closeBar() {
-      document.getElementById('abs-bar').style.display = 'none';
+      const bar = document.getElementById('abs-bar');
+      bar.classList.add('closed');
+      bar.style.display = 'none';
     }
   </script>
 

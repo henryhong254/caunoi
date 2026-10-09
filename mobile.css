@@ -1,0 +1,72 @@
+/* Responsive overrides follow the page's legacy inline styles. */
+body { padding-bottom: var(--sticky-cta-height, 100px); }
+html { scroll-padding-bottom: calc(var(--sticky-cta-height, 100px) + 20px); }
+button, a, .quiz-opt { touch-action: manipulation; }
+:focus-visible { outline: 3px solid #8a9a23; outline-offset: 4px; }
+#abs-bar { padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+.btn-close { min-width: 44px; min-height: 44px; }
+.quiz-opt { font-family: inherit; text-align: left; width: 100%; }
+#btn-prev-question, #btn-retake { min-height: 44px; }
+
+@media (max-width: 768px) {
+  .container { width: 100%; padding-inline: 20px; }
+  .section { padding: 52px 0 !important; }
+  .hero { padding: 52px 0 44px !important; }
+  .hero-eyebrow { font-size: .8rem !important; letter-spacing: .08em !important; }
+  .hero-title { font-size: clamp(1.8rem, 7.3vw, 2.8rem) !important; }
+  .hero-title > .text-dark {
+    display: block !important;
+    width: 100%; max-width: 520px; margin: 20px auto 0 !important;
+    padding: 12px 10px !important; white-space: normal !important;
+    min-height: 3.8em !important; align-content: center;
+  }
+  .hero-title > .text-dark, .hero-title #typewriter, .hero-title .cursor {
+    font-size: clamp(1rem, 4.2vw, 1.5rem) !important;
+    line-height: 1.4;
+  }
+  .hero-subtitle { padding: 0; font-size: 1.05rem !important; }
+  .hero-subtitle br { display: none; }
+  .btn-primary-large { width: 100%; max-width: 520px; min-height: 48px; line-height: 1.5; }
+  .section-title { font-size: clamp(1.65rem, 6vw, 2.1rem) !important; line-height: 1.25; }
+  .section-desc { padding: 0; }
+  #abs-bar { padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); }
+  .abs-content { padding-inline: 12px; }
+  .abs-text { display: none; }
+  .abs-actions { width: 100%; gap: 8px; }
+  #abs-bar .btn-primary-small { flex: 1; font-size: .9rem; min-height: 46px; padding: 12px 8px; white-space: normal; }
+  .btn-close { flex: 0 0 44px; }
+
+  .vt-section > .container { margin-bottom: 32px !important; }
+  .vt-wrap { padding: 72px 20px 0 0; overflow: hidden; }
+  .vt-row { padding-left: 76px !important; margin-bottom: 40px !important; }
+  .vt-center { left: 32px !important; font-size: .75rem !important; width: 48px !important; min-width: 48px !important; height: 48px !important; display: flex; align-items: center; justify-content: center; }
+  .vt-start-dot { left: 32px !important; top: 0 !important; }
+  .vt-svg-track { transform: translateX(-48px) !important; }
+  #vt-car { left: 32px !important; font-size: 1.8rem !important; }
+  .vt-row:last-child .vt-center { font-size: 1.6rem !important; }
+  .vt-img-card { border-width: 2px; }
+  .vt-img-card img { aspect-ratio: 4 / 3; }
+  .vt-title { font-size: 1.65rem !important; line-height: 1.2; }
+  .vt-desc { font-size: 1rem !important; line-height: 1.7; }
+  .vt-equip-badge { letter-spacing: .02em; font-size: .75rem !important; padding: 10px 12px !important; }
+  .parallax-overlay { padding: 48px 0; min-height: 0; }
+  .glass-quote-card { padding: 28px 20px; backdrop-filter: none; background: rgba(2,56,48,.8); }
+  .glass-quote-card .callout-label { font-size: .8rem; letter-spacing: .12em; }
+  .glass-quote-card .callout-text { font-size: 1.2rem; }
+  .archetype-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }
+  .quiz-container { padding: 24px 16px !important; border-radius: 16px !important; margin-top: 28px; min-height: 0 !important; }
+  .quiz-header { gap: 12px; flex-wrap: wrap; }
+  .quiz-step h3 { font-size: 1.15rem !important; line-height: 1.5 !important; }
+  .quiz-opt { min-height: 48px; line-height: 1.6; }
+  .quiz-opt:hover, .quiz-opt.selected { transform: none; }
+  #res-name { font-size: 1.8rem !important; }
+  #res-img { max-width: min(220px, 100%) !important; }
+  #res-desc-top, #res-desc-bottom, #res-note { font-size: 1rem !important; text-align: left !important; }
+  footer { padding: 40px 20px !important; overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .animate-fade-up > * { opacity: 1; transform: none; }
+}
