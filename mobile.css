@@ -8,6 +8,12 @@ button, a, .quiz-opt { touch-action: manipulation; }
 .metro-icon { display: block; flex: none; filter: drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
 .quiz-opt { font-family: inherit; text-align: left; width: 100%; }
 #btn-prev-question, #btn-retake { min-height: 44px; }
+.vt-center.vt-finish { font-size: 2.5rem !important; line-height: 1 !important; }
+
+@media (min-width: 769px) {
+  .vt-center { font-size: .9rem !important; line-height: 1.25 !important; }
+  .vt-center.vt-start-dot { font-size: .85rem !important; }
+}
 
 @media (max-width: 768px) {
   .container { width: 100%; padding-inline: 20px; }
@@ -44,7 +50,7 @@ button, a, .quiz-opt { touch-action: manipulation; }
   .vt-start-dot { left: 32px !important; top: 0 !important; }
   .vt-svg-track { transform: translateX(-48px) !important; }
   #vt-car { left: 32px !important; font-size: 1.8rem !important; }
-  .vt-row:last-child .vt-center { font-size: 1.6rem !important; }
+  .vt-center.vt-finish { font-size: 2rem !important; }
   .vt-img-card { border-width: 2px; }
   .vt-img-card img { aspect-ratio: 4 / 3; }
   .vt-title { font-size: 1.65rem !important; line-height: 1.2; }

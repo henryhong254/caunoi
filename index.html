@@ -159,7 +159,7 @@
       <!-- ROW 4: END -->
       <div class="vt-row" style="margin-bottom: 0;">
         <div class="vt-col vt-left"></div>
-        <div class="vt-center" style="font-size: 3rem; border-width: 4px;">🏆</div>
+        <div class="vt-center vt-finish" style="border-width: 4px;">🏆</div>
         <div class="vt-col vt-right vt-text">
           <div class="vt-sub">&bull; MỤC TIÊU CUỐI</div>
           <h3 class="vt-title">Khách Trả Phí</h3>
@@ -438,13 +438,17 @@
       }
 
       
-      /* Fix Car Position */
+      /* Desktop track is centered; mobile overrides this inside its breakpoint. */
       #vt-car {
-        left: 40px !important;
+        left: 50% !important;
       }
 
       /* Fix Dot Text Overflow */
       .vt-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
         width: 52px !important;
         height: 52px !important;
         min-width: 52px !important;
@@ -1341,6 +1345,7 @@ function initTimeline() {
     trackThin.setAttribute('d', d);
     if(litThick) litThick.setAttribute('d', d);
     if(litThin) litThin.setAttribute('d', d);
+    window.dispatchEvent(new Event('scroll'));
   }
   
   drawTrack();
