@@ -80,8 +80,21 @@
         <path id="vt-track-lit-thin" fill="none" stroke="var(--c-lime)" stroke-width="6" stroke-linecap="round"/>
       </svg>
       
-      <!-- THE DRIVING CAR -->
-      <div id="vt-car" style="position: absolute; top: 0; left: 50%; width: 50px; height: 50px; margin-left: -25px; margin-top: -25px; z-index: 15; font-size: 2.5rem; display: flex; align-items: center; justify-content: center; transform-origin: center; will-change: transform; text-shadow: 0 5px 15px rgba(0,0,0,0.4);">🚗</div>
+      <!-- METRO FOLLOWING THE JOURNEY -->
+      <div id="vt-car" style="position: absolute; top: 0; left: 50%; width: 50px; height: 50px; margin-left: -25px; margin-top: -25px; z-index: 15; display: flex; align-items: center; justify-content: center; transform-origin: center; will-change: transform;" aria-hidden="true">
+        <!-- Custom metro, viewed from above; the cab points along the track. -->
+        <svg class="metro-icon" width="50" height="50" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17H44C53 17 59 23 59 32S53 47 44 47H12C8 47 5 44 5 40V24C5 20 8 17 12 17Z" fill="#F5F3E9" stroke="#023830" stroke-width="3"/>
+          <path d="M13 20H43C47 20 50 21 52 23H13V20ZM13 41H52C50 43 47 44 43 44H13V41Z" fill="#C8DE31"/>
+          <path d="M45 24C51 24 54 27 54 32S51 40 45 40L42 36V28L45 24Z" fill="#04584C"/>
+          <path d="M47 26C50 27 51 29 51 31" stroke="#94D5CB" stroke-width="2" stroke-linecap="round"/>
+          <rect x="13" y="26" width="24" height="12" rx="3" fill="#D2DED9" stroke="#75968A" stroke-width="1.5"/>
+          <path d="M20 27V37M29 27V37" stroke="#75968A" stroke-width="1.5"/>
+          <path d="M10 25V39" stroke="#04584C" stroke-width="2" stroke-linecap="round"/>
+          <path d="M54 23L56 26M54 41L56 38" stroke="#C8DE31" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M8 22V25M8 39V42" stroke="#D66A54" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
 
       <!-- ROW 0: START -->
       <div class="vt-row">

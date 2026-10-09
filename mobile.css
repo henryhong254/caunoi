@@ -5,6 +5,7 @@ button, a, .quiz-opt { touch-action: manipulation; }
 :focus-visible { outline: 3px solid #8a9a23; outline-offset: 4px; }
 #abs-bar { padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
 .btn-close { min-width: 44px; min-height: 44px; }
+.metro-icon { display: block; flex: none; filter: drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
 .quiz-opt { font-family: inherit; text-align: left; width: 100%; }
 #btn-prev-question, #btn-retake { min-height: 44px; }
 
